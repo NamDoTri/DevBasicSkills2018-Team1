@@ -88,13 +88,13 @@ a::before
     left: 0;
     bottom: 0;
     background-color: coral;
-    transform-origin: bottom right;
+    transform-origin: bottom center;
     transition: transform 0.3s ease-out;
 }
 a:hover::before
 {
     transform: scaleX(1);
-    transform-origin: bottom left;
+    transform-origin: bottom center;
 }
 
     /* Converter-1 */
