@@ -120,6 +120,12 @@ a:hover::before
     font-size: 15px;
     width: 49%;
 }
+#numberSystemOutputs td
+{
+    border-right: 1.5px solid red ;
+    text-align: center;
+    font-size: 30px;
+}
 
     /* Side Bar */
 aside#sidebar

@@ -9,7 +9,7 @@
     <meta name="keywords" content="web convert, Math Converters, Truth Tables, binary, hex, oct, decimal, random values, numbers">
     <meta name="author" content="Eetu Heikkinen, Nam Do">
     <link rel="stylesheet" type="text/css" media="screen" href="../math convert main page/css/main.css" />
-    <script src="../math convert main page/js/main.js"></script>
+    <script src="../math convert main page/javascript/numConv(OOP).js"></script>
 </head>
 <body>
     <header>
@@ -36,12 +36,21 @@
     </section>
     <div class="container">
         <div class="converter">
-            <div id="box-1">
-                <p>This converte will change the inputted value to all forms.</p>
+        <div id="box-1">
+            <p>This converte will change the inputted value to all forms.</p>
         </div>
         <div id="box-2">
-                <p>Clicking a button will show you 0-50 decimal converted to oct, hex and bin.</p>
-            </div>
+            <p>Clicking a button will show you 0-50 decimal converted to oct, hex and bin.</p>
+            <table id="numberSystemOutputs">
+                <tr><td>Decimal</td><td>Binary</td><td>Octal</td><td>Hexadecimal</td></tr>
+                <script>
+                    for(var i = 0; i < 51; i++)
+                    {
+                        document.write("<tr> <td>" + i + "</td> <td>"+ fromDec(i,2) +"</td> <td>"+ fromDec(i, 8) +"</td> <td>"+ fromDec(i, 16) +"</td> </tr>");
+                    }
+                </script>
+            </table>
+        </div>
         </div>
     </div>
     <div class="container">
