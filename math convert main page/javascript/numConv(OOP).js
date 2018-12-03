@@ -50,3 +50,29 @@ function takeIn(inputNum, originalBase, targetBase)
 }
 
 //console.log(takeIn(8,10,7));
+function printResult(inputNum,inputType)
+{
+    switch(inputType)
+    {
+        case "dec":
+        document.getElementById("bin").value = fromDec(inputNum,2);
+        document.getElementById("oct").value = fromDec(inputNum,8);
+        document.getElementById("hex").value = fromDec(inputNum,16);        
+        break;
+        case "bin":
+        document.getElementById("dec").value = takeIn(inputNum,2,10);
+        document.getElementById("oct").value = takeIn(inputNum,2,10);
+        document.getElementById("hex").value = takeIn(inputNum,2,10);
+        break;
+        case "oct":
+        document.getElementById("dec").value = takeIn(inputNum,8,10);
+        document.getElementById("bin").value = takeIn(inputNum,8,2);
+        document.getElementById("hex").value = takeIn(inputNum,8,16);
+        break;
+        case "hex":
+        document.getElementById("dec").value = takeIn(inputNum,16,10);
+        document.getElementById("bin").value = takeIn(inputNum,16,2);
+        document.getElementById("oct").value = takeIn(inputNum,16,8);
+        break;
+    }
+}

@@ -38,6 +38,12 @@
         <div class="converter">
         <div id="box-1">
             <p>This converte will change the inputted value to all forms.</p>
+            <table>
+                <tr><td>Decimal</td><td><input type="number" id="dec" onkeyup="printResult(this.value,this.id)"></td></tr>
+                <tr><td>Binary</td><td><input type="number" id="bin" onkeyup="printResult(this.value,this.id)"></td></tr>
+                <tr><td>Octal</td><td><input type="number" id="oct" onkeyup="printResult(this.value,this.id)"></td></tr>
+                <tr><td>Hexadecimal</td><td><input type="string" id="hex" onkeyup="printResult(this.value,this.id)"></td></tr>
+            </table>
         </div>
         <div id="box-2">
             <p>Clicking a button will show you 0-50 decimal converted to oct, hex and bin.</p>
