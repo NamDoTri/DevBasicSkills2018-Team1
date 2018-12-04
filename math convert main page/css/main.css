@@ -106,7 +106,6 @@ a:hover::before
 }
 .converter #box-1
 {
-    border: 1px solid red;
     float: left;
     color: #cccccc;
     font-size: 15px;
@@ -114,35 +113,71 @@ a:hover::before
 }
 .converter #box-2
 {
-    border: 1px solid red;
     float: right;
     color: #cccccc;
     font-size: 15px;
     width: 49%;
 }
+
+    /* Number convert */
+.converter td
+{
+    color: #cccccc;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.error
+{
+    text-decoration: none;
+    font-size: 20px;
+}
+    /* 0-50 decimal */
 #numberSystemOutputs td
 {
-    border-right: 1.5px solid red ;
+    
     text-align: center;
+    font-weight: bold;
     font-size: 30px;
 }
-
-    /* Side Bar */
-aside#sidebar
+    /* combinatorics */
+.combinatorics p
 {
-    float: right;
-    width: 30%;
-    margin-top: 10px;
+    color: #cccccc;
+    font-size: 15px;
 }
-
+    /* Truth Table */
+.truthtable p
+{
+    color: #cccccc;
+    font-size: 15px;
+}
+    /* Random Values */
+.randomvalues p
+{
+    color: #cccccc;
+    font-size: 15px;
+}
+    /* Optional Math page */
+.optionalmath p
+{
+    color: #cccccc;
+    font-size: 15px;
+}
     /* About page */
  article#main-col
  {
-     color: #cccccc;
+    color: #cccccc;
     float: left;
     width: 65%;
  }
 
+ aside#sidebar
+ {
+     float: right;
+     width: 30%;
+     margin-top: 10px;
+ }
     /* Footer */
 footer
 {
