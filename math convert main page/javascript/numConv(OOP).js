@@ -73,7 +73,7 @@ function printResult(inputNum,inputType) //print the results to input boxes
         }
         break;
         case "oct":
-            if (Array.from(inputNum).indexOf(7) == -1 && (Array.from(inputNum).indexOf(8) == -1) && (Array.from(inputNum).indexOf(9) == -1) )
+            if ( (Array.from(inputNum).indexOf("8") == -1) && (Array.from(inputNum).indexOf("9") == -1) )
             {
                 document.getElementById("dec").value = takeIn(inputNum,8,10);
                 document.getElementById("bin").value = takeIn(inputNum,8,2);
