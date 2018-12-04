@@ -11,7 +11,7 @@ class inputNumber
             case 16: this.base = 16; break;
         }
     }
-    toDec()
+    toDec() //convert any numbers to decimal base
     {
         var input = Array.from(this.inputNum.toString());
         var output = 0;
@@ -23,7 +23,7 @@ class inputNumber
         return output;
     }
 }
-function fromDec(inputNum,targetBase)
+function fromDec(inputNum,targetBase) //convert decimal numbers to a specified number base
 {
     var input = inputNum;
     var output = [];
@@ -36,7 +36,7 @@ function fromDec(inputNum,targetBase)
     output = output.join("");
     return output;
 }
-function takeIn(inputNum, originalBase, targetBase)
+function takeIn(inputNum, originalBase, targetBase) //convert among different number bases
 {
     if ( originalBase == 10 )
     {
@@ -48,9 +48,7 @@ function takeIn(inputNum, originalBase, targetBase)
         return fromDec(inputNum.toDec(),targetBase);
     }
 }
-
-//console.log(takeIn(8,10,7));
-function printResult(inputNum,inputType)
+function printResult(inputNum,inputType) //print the results to input boxes
 {
     switch(inputType)
     {
@@ -60,14 +58,31 @@ function printResult(inputNum,inputType)
         document.getElementById("hex").value = fromDec(inputNum,16);        
         break;
         case "bin":
-        document.getElementById("dec").value = takeIn(inputNum,2,10);
-        document.getElementById("oct").value = takeIn(inputNum,2,10);
-        document.getElementById("hex").value = takeIn(inputNum,2,10);
+        for ( let i = 0; i < Array.from(inputNum).length; i++)
+        {
+            if(Array.from(inputNum)[i] == 0 || (Array.from(inputNum)[i] == 1) )
+            {
+                document.getElementById("dec").value = takeIn(inputNum,2,10);
+                document.getElementById("oct").value = takeIn(inputNum,2,10);
+                document.getElementById("hex").value = takeIn(inputNum,2,10);
+                document.getElementsByClassName("error")[0].style.visibility = "hidden";
+            }
+            else{
+                document.getElementsByClassName("error")[0].style.visibility = "visible";
+            }
+        }
         break;
         case "oct":
-        document.getElementById("dec").value = takeIn(inputNum,8,10);
-        document.getElementById("bin").value = takeIn(inputNum,8,2);
-        document.getElementById("hex").value = takeIn(inputNum,8,16);
+            if (Array.from(inputNum).indexOf(7) == -1 && (Array.from(inputNum).indexOf(8) == -1) && (Array.from(inputNum).indexOf(9) == -1) )
+            {
+                document.getElementById("dec").value = takeIn(inputNum,8,10);
+                document.getElementById("bin").value = takeIn(inputNum,8,2);
+                document.getElementById("hex").value = takeIn(inputNum,8,16);
+                document.getElementsByClassName("error")[1].style.visibility = "hidden";
+            }
+            else{
+                document.getElementsByClassName("error")[1].style.visibility = "visible";
+            }
         break;
         case "hex":
         document.getElementById("dec").value = takeIn(inputNum,16,10);
