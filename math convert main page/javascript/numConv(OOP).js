@@ -57,6 +57,10 @@ function takeIn(inputNum, originalBase, targetBase) //convert among different nu
     {
         return fromDec(inputNum,targetBase);
     }
+    else if (originalBase == 16)
+    {
+        return fromDec(parseInt(inputNum,16),targetBase);
+    }
     else
     {
         var inputNum = new inputNumber(inputNum, originalBase);
@@ -100,11 +104,19 @@ function printResult(inputNum,inputType) //print the results to input boxes
             }
         break;
         case "hex":
-        var input = Array.from(inputNum);
-
-        document.getElementById("dec").value = takeIn(inputNum,16,10);
-        document.getElementById("bin").value = takeIn(inputNum,16,2);
-        document.getElementById("oct").value = takeIn(inputNum,16,8);
+        for (let i = 0; i < Array.from(inputNum).length; i++)
+        {
+            if( isNaN(parseInt(Array.from(inputNum)[i],16)))
+            {
+                document.getElementsByClassName("error")[2].style.visibility = "visible";    
+            }
+            else{
+                document.getElementById("dec").value = takeIn(inputNum,16,10);
+                document.getElementById("bin").value = takeIn(inputNum,16,2);
+                document.getElementById("oct").value = takeIn(inputNum,16,8);
+                document.getElementsByClassName("error")[2].style.visibility = "hidden";
+        }
+        }
         break;
     }
 }
