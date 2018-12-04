@@ -12,6 +12,10 @@
     border: 1px solid white;
     padding: 2px 3px;
 }
+.error:hover
+{
+    cursor: pointer;
+}
 
 td
 {

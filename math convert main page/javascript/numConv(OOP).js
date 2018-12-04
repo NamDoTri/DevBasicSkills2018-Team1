@@ -33,6 +33,21 @@ function fromDec(inputNum,targetBase) //convert decimal numbers to a specified n
         input = Math.floor(input/targetBase);
     }
     output.unshift(input);
+    if (targetBase == 16)
+    {
+        for(let i = 0; i < output.length; i++)
+        {
+            switch(String(output[i]))
+            {
+                case "10": output[i] = "A"; break;
+                case "11": output[i] = "B"; break;
+                case "12": output[i] = "C"; break;
+                case "13": output[i] = "D"; break;
+                case "14": output[i] = "E"; break;
+                case "15": output[i] = "F"; break;
+            }
+        }
+    }
     output = output.join("");
     return output;
 }
@@ -63,8 +78,8 @@ function printResult(inputNum,inputType) //print the results to input boxes
             if(Array.from(inputNum)[i] == 0 || (Array.from(inputNum)[i] == 1) )
             {
                 document.getElementById("dec").value = takeIn(inputNum,2,10);
-                document.getElementById("oct").value = takeIn(inputNum,2,10);
-                document.getElementById("hex").value = takeIn(inputNum,2,10);
+                document.getElementById("oct").value = takeIn(inputNum,2,8);
+                document.getElementById("hex").value = takeIn(inputNum,2,16);
                 document.getElementsByClassName("error")[0].style.visibility = "hidden";
             }
             else{
@@ -85,9 +100,16 @@ function printResult(inputNum,inputType) //print the results to input boxes
             }
         break;
         case "hex":
+        var input = Array.from(inputNum);
+
         document.getElementById("dec").value = takeIn(inputNum,16,10);
         document.getElementById("bin").value = takeIn(inputNum,16,2);
         document.getElementById("oct").value = takeIn(inputNum,16,8);
         break;
     }
+}
+function disappear()
+{
+    for(let i = 0; i < 3; i++)
+    {document.getElementsByClassName("error")[i].style.visibility = "hidden";}
 }

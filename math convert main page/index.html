@@ -41,9 +41,9 @@
             <table>
                 <link rel="stylesheet" type="text/css" href="./css/errorMessages.css">
                 <tr><td>Decimal</td><td><input type="number" id="dec" onkeyup="printResult(this.value,this.id)"></td></tr>
-                <tr><td>Binary</td><td><input type="number" id="bin" onkeyup="printResult(this.value,this.id)"> <span class="error">Invalid Number</span></td></tr>
-                <tr><td>Octal</td><td><input type="number" id="oct" onkeyup="printResult(this.value,this.id)"> <span class="error">Invalid Number</span></td></tr>
-                <tr><td>Hexadecimal</td><td><input type="string" id="hex" onkeyup="printResult(this.value,this.id)"> <span class="error">Invalid Number</span></td></tr>
+                <tr><td>Binary</td><td><input type="number" id="bin" onkeyup="printResult(this.value,this.id)"> <span class="error" onclick="disappear()">Invalid Number</span></td></tr>
+                <tr><td>Octal</td><td><input type="number" id="oct" onkeyup="printResult(this.value,this.id)"> <span class="error" onclick="disappear()">Invalid Number</span></td></tr>
+                <tr><td>Hexadecimal</td><td><input type="string" id="hex" onkeyup="printResult(this.value,this.id)"> <span class="error" onclick="disappear()">Invalid Number</span></td></tr>
             </table>
         </div>
         <div id="box-2">
