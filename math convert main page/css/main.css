@@ -127,6 +127,14 @@ a:hover::before
     text-align: center;
     font-weight: bold;
 }
+input[type="number"]
+{
+    font-size: 20px;
+}
+input[type="string"]
+{
+    font-size:20px;
+}
 .error
 {
     text-decoration: none;
@@ -207,5 +215,13 @@ footer
     header
     {
         padding-bottom: 20px;
+    }
+    .converter #box-1, .converter #box-2
+    {
+        float: none;
+        width: 100%;
+        font-size: 10px;
+        justify-content: center;
+        text-align: center;
     }
 }
