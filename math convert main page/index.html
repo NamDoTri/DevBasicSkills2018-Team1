@@ -3,19 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Math Converters | Welcome</title>
+    <title>Math Tools | Welcome</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Website for converting numbers, Combinatorics, Truth Tables, Random Values and Optional">
     <meta name="keywords" content="web convert, Math Converters, Truth Tables, binary, hex, oct, decimal, random values, numbers">
     <meta name="author" content="Eetu Heikkinen, Nam Do">
     <link rel="stylesheet" type="text/css" media="screen" href="../math convert main page/css/main.css" />
     <script src="../math convert main page/javascript/numConv(OOP).js"></script>
+    <script src="./javascript/main.js"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <div id="brand">
-                <h1><span class="highlight">MATH</span> Converters</h1>
+                <h1><span class="highlight">MATH</span> Tools</h1>
             </div>
         </div>
     </header>
@@ -24,7 +25,7 @@
         <div class="container">
             <nav>
                 <ul>
-                <li id="current"><a href="index.html">Number convert</a></li>
+                <li id="current"><a href="index.html">Number converter</a></li>
                 <li><a href="combinatorics.html">Combinatorics</a></li>
                 <li><a href="truthtable.html">Truth Tables</a></li>
                 <li><a href="randomvalues.html">Random Values</a></li>
@@ -37,7 +38,7 @@
     <div class="container">
         <div class="converter">
         <div id="box-1">
-            <p>This converte will change the inputted value to all forms.</p>
+            <p>This converter will change the inputted value to all forms.</p>
             <table>
                 <link rel="stylesheet" type="text/css" href="./css/errorMessages.css">
                 <tr><td>Decimal</td><td><input type="number" id="dec" onkeyup="printResult(this.value,this.id)"></td></tr>
@@ -47,7 +48,8 @@
             </table>
         </div>
         <div id="box-2">
-            <p>Clicking a button will show you 0-50 decimal converted to oct, hex and bin.</p>
+            <p>Clicking a button will show you 0-50 decimal converted to Oct, Hex and Bin.</p>
+            <button onclick="showClear()" id="showClearButton">Show</button>
             <table id="numberSystemOutputs">
                 <tr><td>Decimal</td><td>Binary</td><td>Octal</td><td>Hexadecimal</td></tr>
                 <script>
