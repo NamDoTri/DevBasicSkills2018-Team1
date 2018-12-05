@@ -126,7 +126,7 @@ a:hover::before
 {
     color: #cccccc;
     font-size: 30px;
-    text-align: center;
+    text-align: left;
     font-weight: bold;
 }
 .error
