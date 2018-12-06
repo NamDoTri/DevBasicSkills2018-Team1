@@ -36,31 +36,45 @@
             </nav>
         </div>
     </section>
+
     <div class="container">
         <div class="converter">
         <div id="box-1">
             <p>This converter will change the inputted value to all forms.</p>
-            <table>
+            <table class="calc-1">
                 <link rel="stylesheet" type="text/css" href="./css/errorMessages.css">
-                <tr><td>Decimal</td><td><input placeholder="Input Decimal" type="number" id="dec" onkeyup="printResult(this.value,this.id)"></td></tr>
-                <tr><td>Binary</td><td><input placeholder="Input Binary" type="number" id="bin" onkeyup="printResult(this.value,this.id)"> <span class="error" onmousemove="disappear()">Invalid Number</span></td></tr>
-                <tr><td>Octal</td><td><input type="number" placeholder="Input Octal" id="oct" onkeyup="printResult(this.value,this.id)"> <span class="error" onmousemove="disappear()">Invalid Number</span></td></tr>
-                <tr><td>Hexadecimal</td><td><input type="string" placeholder="Input Hexadecimal" id="hex" onkeyup="printResult(this.value,this.id)"> <span class="error" onmousemove="disappear()">Invalid Number</span></td></tr>
+                <tr>
+                    <td>Decimal</td>
+                    <td><input placeholder="Input Decimal" type="number" id="dec" onkeyup="printResult(this.value,this.id)"></td>
+                </tr>
+                <tr>
+                    <td>Binary</td>
+                    <td><input placeholder="Input Binary" type="number" id="bin" onkeyup="printResult(this.value,this.id)"> <span class="error" onmousemove="disappear()">Invalid Number</span></td>
+                </tr>
+                <tr>
+                    <td>Octal</td>
+                    <td><input type="number" placeholder="Input Octal" id="oct" onkeyup="printResult(this.value,this.id)"> <span class="error" onmousemove="disappear()">Invalid Number</span></td>
+                </tr>
+                <tr>
+                    <td>Hexa</td>
+                    <td><input type="string" placeholder="Input Hexadecimal" id="hex" onkeyup="printResult(this.value,this.id)"> <span class="error" onmousemove="disappear()">Invalid Number</span></td>
+                </tr>
             </table>
         </div>
+
         <div id="box-2">
             <p>Clicking a button will show you 0-50 decimal converted to Oct, Hex and Bin.</p>
             <button onclick="showClear()" id="showClearButton">Show</button>
             <table id="numberSystemOutputs">
-                <tr><td>Decimal</td><td>Binary</td><td>Octal</td><td>Hexadecimal</td></tr>
+                <tr>
+                    <td>Decimal</td>
+                    <td>Binary</td>
+                    <td>Octal</td>
+                    <td>Hexadecimal</td>
+                </tr>
                 <script src="javascript/tableGen.js"></script>
             </table>
         </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="converter">
-
         </div>
     </div>
 <!-- <footer>

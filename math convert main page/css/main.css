@@ -111,14 +111,14 @@ a:hover::before
 }
 .converter #box-1
 {
-    float: left;
+    border: red 1px solid;
     color: #cccccc;
     font-size: 15px;
     width: 49%;
 }
 .converter #box-2
 {
-    float: right;
+    border: red 1px solid;
     color: #cccccc;
     font-size: 15px;
     width: 49%;
@@ -131,6 +131,7 @@ a:hover::before
     font-size: 30px;
     text-align: left;
     font-weight: bold;
+    overflow-x: auto;
 }
 input[type="number"]
 {
@@ -144,6 +145,7 @@ input[type="string"]
 {
     text-decoration: none;
     font-size: 20px;
+    width: 100%;
 }
     /* 0-50 decimal */
 #numberSystemOutputs td
@@ -214,9 +216,9 @@ footer
     header .highlight, .tabs#current a,
     article#main-col,
     aside#sidebar,
-    #main
+    #main,
+    .converter
     {
-        float: none;
         text-align: center;
         width: 100%;
     }
@@ -224,12 +226,22 @@ footer
     {
         padding-bottom: 20px;
     }
-    .converter #box-1, .converter #box-2
+    .calc-1
     {
-        float: none;
-        width: 100%;
-        font-size: 10px;
-        justify-content: center;
-        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+    }
+    .calc-1 td
+    {
+        float: left;
+    }
+    .calc-1 tr
+    {
+        line-height: 20px;
+    }
+    .calc-1 td:nth-child(2)
+    {
+        clear: left;
     }
 }
