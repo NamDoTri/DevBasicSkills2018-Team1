@@ -33,6 +33,9 @@ body
    border-radius: 7px;
    outline: none;
 } 
+#showClearButton:hover{
+    cursor: pointer;
+}
 
     /* Header */
 header h1
