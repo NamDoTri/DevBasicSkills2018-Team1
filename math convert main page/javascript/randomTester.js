@@ -1,5 +1,16 @@
-var randomNumbers = [1,1,2,1,1,4,4,5,1,4,7,2,4,8];
+var randomNumbers = [];
 var test = [], previousNumber;
+
+function randomNumberGen(range)
+{
+    randomNumbers = [];
+    for ( let i = 0; i < range; i++)
+    {
+        randomNumbers.push( Math.round(Math.random()*range) );
+    }
+    return randomNumbers;
+}
+
 class numberCount
 {
     constructor(value)
@@ -20,7 +31,7 @@ class numberCount
         return this.value;
     }
 }
-randomNumbers = randomNumbers.sort();
+randomNumbers = randomNumberGen(10).sort();
 for (let i = 0; i < randomNumbers.length; i++)
 {
     if( randomNumbers[i] !== previousNumber)
