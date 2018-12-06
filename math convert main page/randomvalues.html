@@ -9,8 +9,9 @@
     <meta name="keywords" content="web convert, Math Converters, Truth Tables, binary, hex, oct, decimal, random values, numbers">
     <meta name="author" content="Eetu Heikkinen, Nam Do">
     <link rel="stylesheet" type="text/css" media="screen" href="../math convert main page/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/randomValues.css">
     <link rel="icon" type="image" href="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/calculator-512.png">
-    <script src="../math convert main page/js/main.js"></script>
+    <script src="./javascript/randomTester.js"></script>
 </head>
 <body>
     <header>
@@ -38,6 +39,13 @@
     <div class="container">
         <div class="randomvalues">
             <p>Random values will be diplayed on this page</p>
+            <input type="number" id="numberRange" placeholder="Input Range"> <button id="generate" onclick="randomNumberGen(document.getElementById('numberRange').value)">Generate</button>
+            <p id="numbersGenerated"></p>
+            <div id="stats">
+                <button id="showStats" onclick="showStats()">Show statistics</button>
+                <table >
+                </table>
+            </div>
         </div>
     </div>
     <!-- <footer>

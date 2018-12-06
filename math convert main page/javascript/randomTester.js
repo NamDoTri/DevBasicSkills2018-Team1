@@ -3,12 +3,24 @@ var test = [], previousNumber;
 
 function randomNumberGen(range)
 {
-    randomNumbers = [];
-    for ( let i = 0; i < range; i++)
+    if(document.getElementById("generate").textContent == "Generate")
     {
-        randomNumbers.push( Math.round(Math.random()*range) );
+        randomNumbers = [];
+        for ( let i = 0; i < range; i++)
+        {
+            randomNumbers.push( Math.round(Math.random()* range) );
+        }
+        document.getElementById("numbersGenerated").innerHTML = randomNumbers.join(", ");
+        document.getElementById("stats").style.visibility = "visible";
+        document.getElementById("generate").textContent = "Reset";
+        return randomNumbers;
     }
-    return randomNumbers;
+    else{
+        document.getElementById("numbersGenerated").innerHTML = "";
+        document.getElementById("numberRange").value = "";
+        document.getElementById("generate").textContent = "Generate";
+        document.getElementById("stats").style.visibility = "hidden";
+    }
 }
 
 class numberCount
@@ -31,16 +43,21 @@ class numberCount
         return this.value;
     }
 }
-randomNumbers = randomNumberGen(10).sort();
-for (let i = 0; i < randomNumbers.length; i++)
+
+
+function showStats()
 {
-    if( randomNumbers[i] !== previousNumber)
+    randomNumbers = randomNumberGen(10).sort();
+    for (let i = 0; i < randomNumbers.length; i++)
     {
-        test.push( new numberCount(randomNumbers[i]));
+        if( randomNumbers[i] !== previousNumber)
+        {
+            test.push( new numberCount(randomNumbers[i]));
+        }
+        else{
+            test[test.length - 1].incrementCount();
+        }
+        previousNumber = randomNumbers[i];
     }
-    else{
-        test[test.length - 1].incrementCount();
-    }
-    previousNumber = randomNumbers[i];
+    document.write("")
 }
-console.log( test );

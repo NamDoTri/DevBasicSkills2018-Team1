@@ -22,7 +22,7 @@ body
     margin-bottom: 10px;
 }
 
-#showClearButton
+button
 {
    height: 38px;
    background: coral;
@@ -33,7 +33,7 @@ body
    border-radius: 7px;
    outline: none;
 } 
-#showClearButton:hover{
+button:hover{
     cursor: pointer;
 }
 
