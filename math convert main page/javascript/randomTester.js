@@ -6,6 +6,7 @@ function randomNumberGen(range)
     if(document.getElementById("generate").textContent == "Generate")
     {
         randomNumbers = [];
+        test = [];
         for ( let i = 0; i < range; i++)
         {
             randomNumbers.push( Math.round(Math.random()* range) );
@@ -20,6 +21,7 @@ function randomNumberGen(range)
         document.getElementById("numberRange").value = "";
         document.getElementById("generate").textContent = "Generate";
         document.getElementById("stats").style.visibility = "hidden";
+        document.getElementById("statsTable").innerHTML = "";
     }
 }
 
@@ -44,10 +46,9 @@ class numberCount
     }
 }
 
-
 function showStats()
 {
-    randomNumbers = randomNumberGen(10).sort();
+    randomNumbers.sort();
     for (let i = 0; i < randomNumbers.length; i++)
     {
         if( randomNumbers[i] !== previousNumber)
@@ -59,5 +60,9 @@ function showStats()
         }
         previousNumber = randomNumbers[i];
     }
-    document.write("")
+    document.getElementById("statsTable").innerHTML = "<tr><label>Hello!</label></tr>";
+    for ( let i  = 0; i < test.length; i++)
+    {
+        document.getElementById("statsTable").innerHTML += "<tr> <td>" + test[i].showNumber() + "</td> <td>" + test[i].showDuplicate() + "</td> </tr>"
+    }
 }

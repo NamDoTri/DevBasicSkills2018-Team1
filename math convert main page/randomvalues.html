@@ -37,13 +37,13 @@
         </div>
     </section>
     <div class="container">
-        <div class="randomvalues">
+        <div class="randomValues">
             <p>Random values will be diplayed on this page</p>
             <input type="number" id="numberRange" placeholder="Input Range"> <button id="generate" onclick="randomNumberGen(document.getElementById('numberRange').value)">Generate</button>
             <p id="numbersGenerated"></p>
             <div id="stats">
                 <button id="showStats" onclick="showStats()">Show statistics</button>
-                <table >
+                <table id="statsTable" style="color: white">
                 </table>
             </div>
         </div>
