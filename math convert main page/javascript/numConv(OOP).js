@@ -79,6 +79,7 @@ function printResult(inputNum,inputType) //print the results to input boxes
         case "bin":
         for ( let i = 0; i < Array.from(inputNum).length; i++)
         {
+            console.log(inputNum);
             if(Array.from(inputNum)[i] == 0 || (Array.from(inputNum)[i] == 1) )
             {
                 document.getElementById("dec").value = takeIn(inputNum,2,10);
@@ -119,9 +120,4 @@ function printResult(inputNum,inputType) //print the results to input boxes
         }
         break;
     }
-}
-function disappear(e)
-{
-    console.log(e);
-    document.e.style.visibility = "hidden";
 }
