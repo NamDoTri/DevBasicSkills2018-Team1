@@ -3,7 +3,7 @@ var test = [], previousNumber;
 
 function randomNumberGen(range,length)
 {
-    if(document.getElementById("generate").textContent == "Generate")
+    if(document.getElementById("generate").textContent == "Generate" && document.getElementById("numberRange").value != "" && document.getElementById("numberElements").value != "")
     {
         randomNumbers = [];
         test = [];
