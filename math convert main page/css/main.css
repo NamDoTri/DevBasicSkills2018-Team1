@@ -219,6 +219,7 @@ footer
     article#main-col,
     aside#sidebar,
     #main,
+    #numberSystemOutputs,
     .converter
     {
         text-align: center;
@@ -246,4 +247,13 @@ footer
     {
         clear: left;
     }
+    #numberSystemOutputs
+    {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+        width: 100%;
+    }
+    
+
 }
