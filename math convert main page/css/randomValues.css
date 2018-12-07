@@ -5,6 +5,7 @@
 .randomValues
 {
     margin-left: 10%;
+    color: #cccccc;
 }
 p
 {
@@ -13,4 +14,12 @@ p
 #statsTable
 {
     border: 1px solid coral ;
+}
+input
+{
+    margin-bottom: 20px;
+}
+.infoMessage
+{
+    visibility: hidden;
 }

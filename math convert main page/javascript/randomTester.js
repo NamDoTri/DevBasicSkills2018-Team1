@@ -19,10 +19,12 @@ function randomNumberGen(range,length)
     else if( document.getElementById("numberRange").value == "")
     {
         console.log("Range missing");
+        document.getElementsByClassName("infoMessage")[0].style.visibility ="visible";
     }
     else if( document.getElementById("numberElements").value == "")
     {
         console.log("Length missing");
+        document.getElementsByClassName("infoMessage")[1].style.visibility ="visible";
     }
     else{
         document.getElementById("numbersGenerated").innerHTML = "";
@@ -75,4 +77,9 @@ function showStats()
     {
         document.getElementById("statsTable").innerHTML += "<tr> <td>" + test[i].showNumber() + "</td> <td>" + test[i].showDuplicate() + "</td> </tr>"
     }
+}
+function clearMessage()
+{
+    document.getElementsByClassName("infoMessage")[0].style.visibility = "hidden";
+    document.getElementsByClassName("infoMessage")[1].style.visibility = "hidden";
 }
