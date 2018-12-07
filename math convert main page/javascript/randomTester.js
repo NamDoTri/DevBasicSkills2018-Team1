@@ -60,7 +60,8 @@ function showStats()
         }
         previousNumber = randomNumbers[i];
     }
-    document.getElementById("statsTable").innerHTML = "<tr><label>Hello!</label></tr>";
+    document.getElementById("statsTable").innerHTML = "<tr><label colspan=\"2\">Statistics</label></tr>";
+    document.getElementById("statsTable").innerHTML += "<tr> <td>Number</td> <td>Times</td> </tr>";
     for ( let i  = 0; i < test.length; i++)
     {
         document.getElementById("statsTable").innerHTML += "<tr> <td>" + test[i].showNumber() + "</td> <td>" + test[i].showDuplicate() + "</td> </tr>"
