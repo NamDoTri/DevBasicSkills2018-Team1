@@ -12,3 +12,4 @@ function showClear()
         buttonID.textContent = "Show";
     }
 }
+//document.addEventListener("keydown",)

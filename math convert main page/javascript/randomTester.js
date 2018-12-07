@@ -16,6 +16,14 @@ function randomNumberGen(range,length)
         document.getElementById("generate").textContent = "Reset";
         return randomNumbers;
     }
+    else if( document.getElementById("numberRange").value == "")
+    {
+        console.log("Range missing");
+    }
+    else if( document.getElementById("numberElements").value == "")
+    {
+        console.log("Length missing");
+    }
     else{
         document.getElementById("numbersGenerated").innerHTML = "";
         document.getElementById("numberElements").value = "";
