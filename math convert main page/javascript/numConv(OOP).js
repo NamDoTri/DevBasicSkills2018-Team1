@@ -120,8 +120,8 @@ function printResult(inputNum,inputType) //print the results to input boxes
         break;
     }
 }
-function disappear()
+function disappear(e)
 {
-    for(let i = 0; i < 3; i++)
-    {document.getElementsByClassName("error")[i].style.visibility = "hidden";}
+    console.log(e);
+    document.e.style.visibility = "hidden";
 }
