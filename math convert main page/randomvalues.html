@@ -39,7 +39,9 @@
     <div class="container">
         <div class="randomValues">
             <p>Random values will be diplayed on this page</p>
-            <input type="number" id="numberRange" placeholder="Input Range"> <button id="generate" onclick="randomNumberGen(document.getElementById('numberRange').value)">Generate</button>
+            <input type="number" id="numberRange" placeholder="Input Range"> 
+            <input type="number" id="numberElements" placeholder="Input Number of Elements">
+            <button id="generate" onclick="randomNumberGen(document.getElementById('numberRange').value,document.getElementById('numberElements').value)">Generate</button>
             <p id="numbersGenerated"></p>
             <div id="stats">
                 <button id="showStats" onclick="showStats()">Show statistics</button>

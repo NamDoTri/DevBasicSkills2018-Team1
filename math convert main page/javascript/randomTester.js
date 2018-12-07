@@ -1,13 +1,13 @@
 var randomNumbers = [];
 var test = [], previousNumber;
 
-function randomNumberGen(range)
+function randomNumberGen(range,length)
 {
     if(document.getElementById("generate").textContent == "Generate")
     {
         randomNumbers = [];
         test = [];
-        for ( let i = 0; i < range; i++)
+        for ( let i = 0; i < length; i++)
         {
             randomNumbers.push( Math.round(Math.random()* range) );
         }
