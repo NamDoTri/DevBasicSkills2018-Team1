@@ -18,6 +18,7 @@ function randomNumberGen(range,length)
     }
     else{
         document.getElementById("numbersGenerated").innerHTML = "";
+        document.getElementById("numberElements").value = "";
         document.getElementById("numberRange").value = "";
         document.getElementById("generate").textContent = "Generate";
         document.getElementById("stats").style.visibility = "hidden";

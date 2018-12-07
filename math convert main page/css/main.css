@@ -132,6 +132,7 @@ a:hover::before
     text-align: left;
     font-weight: bold;
     overflow-x: auto;
+    border: 2px solid white;
 }
 input[type="number"]
 {
@@ -143,9 +144,10 @@ input[type="string"]
 }
 .error
 {
+    margin-left: 50px;
     text-decoration: none;
     font-size: 20px;
-    width: 100%;
+    width: 150px;
 }
     /* 0-50 decimal */
 #numberSystemOutputs td
