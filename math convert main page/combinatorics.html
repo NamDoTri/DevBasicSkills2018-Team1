@@ -9,8 +9,9 @@
     <meta name="keywords" content="web convert, Math Converters, Truth Tables, binary, hex, oct, decimal, random values, numbers">
     <meta name="author" content="Eetu Heikkinen, Nam Do">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/combinatorics.css">
     <link rel="icon" type="image" href="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/calculator-512.png">
-    <script src="./js/main.js"></script>
+    <script src="./javascript/combinatorics.js"></script>
 </head>
 <body>
     <header>
@@ -38,6 +39,16 @@
     <div class="container">
         <div class="combinatorics">
             <p>Combinatorics will come on this page</p>
+            <button class="switches" id="defaultOpen" onclick="openTab('Combination')">Combination</button>
+            <button class="switches" onclick="openTab('Permutation')">Permutation</button>
+
+            <div id="Combination" class="calculator"> This is combination
+                <input id="originalSet" type="number" placeholder="Length of original set"><br>
+                <input id="subset" type="number" placeholder="Length of each subset"><br>
+                <button onclick="combination(document.getElementById('originalSet').value, document.getElementById('subset').value)">Calculate</button>
+                <div id="result"></div>
+            </div>
+            <div id="Permutation" class="calculator"> This is permutation</div>
         </div>
     </div>
     <!-- <footer>
