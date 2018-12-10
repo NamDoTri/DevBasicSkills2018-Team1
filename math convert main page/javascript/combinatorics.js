@@ -25,14 +25,18 @@ function factorial(a)
     return output;
 }
 
-function combination(n,k)
+function combination()
 {
+    var n = document.getElementById("originalSet").value;
+    var k = document.getElementById("subset").value;
     var output = Math.round(factorial(n)/(factorial(k) * factorial(n-k))) ;
     document.getElementById("result1").innerHTML = "There are " + output + " possible subsets."
 }
 
 function permutation(n,k)
 {
+    var n = document.getElementById("original").value;
+    var k = document.getElementById("vacancies").value;
     if( document.getElementById("sampling").checked == false)
     {
         document.getElementById("result2").innerHTML = factorial(n)/factorial(n-k);
