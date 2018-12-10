@@ -187,6 +187,7 @@ input[type="string"]
 {
     color: #ffffff;
     font-size: 15px;
+    text-align: center;
 }
 #truthtable
 {
@@ -273,6 +274,11 @@ footer
         align-content: center;
         margin: 5px;
     }
+    .truthtable_p
+    {
+        margin-left: 25px;
+        width: 100%
+    }
     header
     {
         padding-bottom: 20px;
@@ -305,7 +311,7 @@ footer
     #truthtable
     {
         flex-wrap: wrap;
-        width: 99%;
+        width: 100%;
         font-size: 15px;
         padding: 0;
         margin: 0;
