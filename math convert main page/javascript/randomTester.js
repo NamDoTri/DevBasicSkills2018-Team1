@@ -41,7 +41,18 @@ function randomNumberGen(range,length)
         document.getElementById("hideNumbers").style.visibility = "hidden";
     }
 }
-
+function hideNumbers()
+{
+    if ( document.getElementById("hideNumbers").textContent == "Hide numbers")
+    {
+        document.getElementById("numbersGenerated").style.display = "none";
+        document.getElementById("hideNumbers").textContent = "Show numbers";
+    }
+    else{
+        document.getElementById("hideNumbers").textContent = "Hide numbers";
+        document.getElementById("numbersGenerated").style.display = "block";
+    }
+}
 class numberCount
 {
     constructor(value)

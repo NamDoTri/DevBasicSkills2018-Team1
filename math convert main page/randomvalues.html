@@ -38,14 +38,15 @@
     </section>
     <div class="container">
         <div class="randomValues">
-            <p>Random values will be diplayed on this page</p>
+            <p>This tool creates a set of random numbers and allows you to see how many times each number shows up.</p>
             <input type="number" id="numberRange" placeholder="Input Range" onkeyup="if(event.keyCode != 13) clearMessage()" onkeydown="if(event.keyCode == 13) randomNumberGen(document.getElementById('numberRange').value,document.getElementById('numberElements').value)"> 
             <span class="infoMessage">Range is missing</span><br>
             <input type="number" max="9999" id="numberElements" placeholder="Input Number of Elements" onkeyup="if(event.keyCode != 13) clearMessage()" onkeydown="if(event.keyCode == 13) randomNumberGen(document.getElementById('numberRange').value,document.getElementById('numberElements').value)"> 
             <span class="infoMessage">Length is missing</span><br>
             <button id="generate" onclick="randomNumberGen(document.getElementById('numberRange').value,document.getElementById('numberElements').value)">Generate</button>
-            <button id="hideNumbers">Hide numbers</button>
+            <button id="hideNumbers" onclick="hideNumbers()">Hide numbers</button>
             <p id="numbersGenerated"></p>
+            <br>&nbsp;
             <div id="stats">
                 <button id="showStats" onclick="showStats()">Show statistics</button>
                 <br>&nbsp;
