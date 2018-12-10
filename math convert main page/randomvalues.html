@@ -44,6 +44,7 @@
             <input type="number" max="9999" id="numberElements" placeholder="Input Number of Elements" onkeyup="if(event.keyCode != 13) clearMessage()" onkeydown="if(event.keyCode == 13) randomNumberGen(document.getElementById('numberRange').value,document.getElementById('numberElements').value)"> 
             <span class="infoMessage">Length is missing</span><br>
             <button id="generate" onclick="randomNumberGen(document.getElementById('numberRange').value,document.getElementById('numberElements').value)">Generate</button>
+            <button id="hideNumbers">Hide numbers</button>
             <p id="numbersGenerated"></p>
             <div id="stats">
                 <button id="showStats" onclick="showStats()">Show statistics</button>

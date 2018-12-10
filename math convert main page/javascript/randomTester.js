@@ -14,17 +14,22 @@ function randomNumberGen(range,length)
         document.getElementById("numbersGenerated").innerHTML = randomNumbers.join(", ");
         document.getElementById("stats").style.visibility = "visible";
         document.getElementById("generate").textContent = "Reset";
-        return randomNumbers;
+        if ( document.getElementById("numberElements").value > 50)
+        {
+            document.getElementById("hideNumbers").style.visibility = "visible";   
+        }
     }
     else if( document.getElementById("numberRange").value == "")
     {
-        console.log("Range missing");
-        document.getElementsByClassName("infoMessage")[0].style.visibility ="visible";
+        var range = document.getElementById("numberRange");
+        range.className = "red";
+        range.placeholder = "Range is missing";      
     }
     else if( document.getElementById("numberElements").value == "")
     {
-        console.log("Length missing");
-        document.getElementsByClassName("infoMessage")[1].style.visibility ="visible";
+        var length = document.getElementById("numberElements");
+        length.className = "red";
+        length.placeholder = "Length is missing";
     }
     else{
         document.getElementById("numbersGenerated").innerHTML = "";
@@ -33,6 +38,7 @@ function randomNumberGen(range,length)
         document.getElementById("generate").textContent = "Generate";
         document.getElementById("stats").style.visibility = "hidden";
         document.getElementById("statsTable").innerHTML = "";
+        document.getElementById("hideNumbers").style.visibility = "hidden";
     }
 }
 

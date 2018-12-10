@@ -23,3 +23,10 @@ input
 {
     visibility: hidden;
 }
+#hideNumbers
+{
+    visibility: hidden;
+}
+.red::placeholder{
+    color: red;
+}
