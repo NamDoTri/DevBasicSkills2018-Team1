@@ -119,14 +119,15 @@ a:hover::before
 {
     color: #cccccc;
     font-size: 15px;
-    width: 100%;
+    width: 80%;
 }
 .converter #box-2
 {
     color: #cccccc;
     font-size: 15px;
-    width: 100%;
+    width: 80%;
     table-layout: fixed;
+    margin-left: 5px;
 }
 #box-2 td
 {
@@ -189,15 +190,12 @@ input[type="string"]
 }
 #truthtable
 {
-    display:inline-block;
     display: flex;
     flex-direction: row;
     justify-content: center;
     color: #ffffff;
     border-collapse: collapse;
     text-align: center;
-    table-layout: fixed;
-    width: 100%;
 }
 #truthtable th
 {
@@ -304,14 +302,13 @@ footer
         padding: 5px;
         width: 100%;
     }
-    #truthtable,
+    #truthtable
     {
         flex-wrap: wrap;
-        width: 100%;
+        width: 99%;
         font-size: 15px;
         padding: 0;
         margin: 0;
-        vertical-align: baseline;
         justify-content: center;
     }
     #truthtable th
