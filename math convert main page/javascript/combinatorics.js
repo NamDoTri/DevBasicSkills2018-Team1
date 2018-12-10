@@ -12,8 +12,6 @@ function openTab(which)
     }
     document.getElementById(which).style.display="block";
 }
-document.getElementById("defaultOpen").click();
-
 function factorial(a)
 {
     var output = a;
@@ -29,20 +27,45 @@ function combination()
 {
     var n = document.getElementById("originalSet").value;
     var k = document.getElementById("subset").value;
-    var output = Math.round(factorial(n)/(factorial(k) * factorial(n-k))) ;
-    document.getElementById("result1").innerHTML = "There are " + output + " possible subsets."
+    if ( n == "")
+    {
+        document.getElementById("originalSet").placeholder = "Original set missing";
+        document.getElementById("originalSet").className = "red";
+    }
+    else if( k == "")
+    {
+        document.getElementById("subset").placeholder = "Length of each subset missing";
+        document.getElementById("subset").className = "red";
+        
+    }
+    else{
+        var output = Math.round(factorial(n)/(factorial(k) * factorial(n-k))) ;
+        document.getElementById("result1").innerHTML = "There are " + output + " possible subsets.";
+    }
 }
 
 function permutation(n,k)
 {
     var n = document.getElementById("original").value;
     var k = document.getElementById("vacancies").value;
-    if( document.getElementById("sampling").checked == false)
+    if ( n == "")
     {
-        document.getElementById("result2").innerHTML = factorial(n)/factorial(n-k);
+        document.getElementById("original").placeholder = "Original set missing";
+        document.getElementById("original").className = "red";
+    }
+    else if( k == "")
+    {
+        document.getElementById("vacancies").placeholder = "Number of vacancies missing";
+        document.getElementById("vacancies").className = "red";
     }
     else{
-        document.getElementById("result2").innerHTML = Math.pow(n,k);
+        if( document.getElementById("sampling").checked == false)
+        {
+            document.getElementById("result2").innerHTML = "There are " + factorial(n)/factorial(n-k) + " probabilities.";
+        }
+        else{
+            document.getElementById("result2").innerHTML = "There are " + Math.pow(n,k) + " probabilities.";
+        }
     }
 }
 
