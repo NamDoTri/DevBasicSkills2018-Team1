@@ -159,12 +159,14 @@ input[type="string"]
     /* combinatorics */
 .combinatorics p
 {
+    text-align: center;
     color: #cccccc;
     font-size: 15px;
 }
     /* Truth Table */
 .truthtable
 {
+    float: left;
     color: #ffffff;
     border-collapse: collapse;
     align-content: center;
@@ -174,13 +176,15 @@ input[type="string"]
     font-weight: bold;
     margin: 5px;
 }
-.truthtable, th, td
+.truthtable_1 th, .truthtable_1 td,
 {
     border: 1px white solid;
 }
-
     /* Random Values */
-
+#statsTable label
+{
+    text-align: center;
+}
 .randomvalues p
 {
     color: #cccccc;
@@ -232,11 +236,12 @@ footer
     #main,
     #numberSystemOutputs,
     .converter,
-    .truthtable,
+    .truthtable_1
     {
         text-align: center;
-        width: 100%;
+        width: 99%;
         align-content: center;
+        margin: 5px;
     }
     header
     {
@@ -266,5 +271,5 @@ footer
         margin-right: auto;
         padding: 5px;
         width: 100%;
-    }    
+    }
 }
