@@ -169,21 +169,35 @@ input[type="string"]
     /* Truth Table */
 .truthtable
 {
+    float: left;
     color: #ffffff;
     border-collapse: collapse;
     align-content: center;
     text-align: center;
     width: 20%;
     font-size: 30px;
-    font-weight: bold;
 }
-.truthtable, th, td
+.truthtable_2
 {
-    border: 1px black solid;
+    margin-left: 15px;
+    float: left;
+    color: #ffffff;
+    border-collapse: collapse;
+    align-content: center;
+    text-align: center;
+    width: 20%;
+    font-size: 30px;
 }
-
+.truthtable th, .truthtable td, .truthtable_2 th, .truthtable_2 td
+{
+    border: 3px coral solid;
+    padding: 15px;
+}
     /* Random Values */
-
+#statsTable label
+{
+    text-align: center;
+}
 .randomvalues p
 {
     color: #cccccc;
