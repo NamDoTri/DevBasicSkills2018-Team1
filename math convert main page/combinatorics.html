@@ -26,7 +26,7 @@
         <div class="container">
             <nav>
                 <ul>
-                <li><a href="index.html">Number convert</a></li>
+                <li><a href="index.html">Number converter</a></li>
                 <li id="current"><a href="combinatorics.html">Combinatorics</a></li>
                 <li><a href="truthtable.html">Truth Tables</a></li>
                 <li><a href="randomvalues.html">Random Values</a></li>
@@ -39,16 +39,22 @@
     <div class="container">
         <div class="combinatorics">
             <p>Combinatorics will come on this page</p>
-            <button class="switches" id="defaultOpen" onclick="openTab('Combination')">Combination</button>
+            <button class="switches" id="defaultOpen" onclick="openTab('Combination')" >Combination</button>
             <button class="switches" onclick="openTab('Permutation')">Permutation</button>
 
-            <div id="Combination" class="calculator"> This is combination
-                <input id="originalSet" type="number" placeholder="Length of original set"><br>
-                <input id="subset" type="number" placeholder="Length of each subset"><br>
-                <button onclick="combination(document.getElementById('originalSet').value, document.getElementById('subset').value)">Calculate</button>
-                <div id="result"></div>
+            <div id="Combination" class="calculator" style="display:block"> This is combination <br>
+                <input id="originalSet" type="number" placeholder="Length of original set" onchange="combination()"><br>
+                <input id="subset" type="number" placeholder="Length of each subset" onchange="combination()"><br>
+                <button onclick="combination()">Calculate</button>
+                <div id="result1"></div>
             </div>
-            <div id="Permutation" class="calculator"> This is permutation</div>
+            <div id="Permutation" class="calculator"> This is permutation <br>
+                <input type="number" id="original" placeholder="Length of Original Set" onkeydown="if(event.keyCode == 13) permutation()"> <br>
+                <input type="number" id="vacancies" placeholder="Number of vacancies" onkeydown="if(event.keyCode == 13) permutation()"> <br>
+                <input type="checkbox" id="sampling">Sampling with replacement <br>
+                <button onclick="permutation()">Calculate</button>
+                <div id="result2"></div>
+            </div>
         </div>
     </div>
     <!-- <footer>

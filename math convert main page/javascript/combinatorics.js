@@ -12,8 +12,6 @@ function openTab(which)
     }
     document.getElementById(which).style.display="block";
 }
-document.getElementById("defaultOpen").click();
-
 function factorial(a)
 {
     var output = a;
@@ -25,19 +23,51 @@ function factorial(a)
     return output;
 }
 
-function combination(n,k)
+function combination()
 {
-    var output = (factorial(n)/(factorial(k) * factorial(n-k))) ;
-    document.getElementById("result").innerHTML = "There are " + output + " possible subsets."
+    var n = document.getElementById("originalSet").value;
+    var k = document.getElementById("subset").value;
+    if ( n == "")
+    {
+        document.getElementById("originalSet").placeholder = "Original set missing";
+        document.getElementById("originalSet").className = "red";
+    }
+    else if( k == "")
+    {
+        document.getElementById("subset").placeholder = "Length of each subset missing";
+        document.getElementById("subset").className = "red";
+        
+    }
+    else{
+        var output = Math.round(factorial(n)/(factorial(k) * factorial(n-k))) ;
+        document.getElementById("result1").innerHTML = "There are " + output + " possible subsets.";
+    }
 }
 
-function permutation(v)
+function permutation(n,k)
 {
-    return factorial(v);
+    var n = document.getElementById("original").value;
+    var k = document.getElementById("vacancies").value;
+    if ( n == "")
+    {
+        document.getElementById("original").placeholder = "Original set missing";
+        document.getElementById("original").className = "red";
+    }
+    else if( k == "")
+    {
+        document.getElementById("vacancies").placeholder = "Number of vacancies missing";
+        document.getElementById("vacancies").className = "red";
+    }
+    else{
+        if( document.getElementById("sampling").checked == false)
+        {
+            document.getElementById("result2").innerHTML = "There are " + factorial(n)/factorial(n-k) + " probabilities.";
+        }
+        else{
+            document.getElementById("result2").innerHTML = "There are " + Math.pow(n,k) + " probabilities.";
+        }
+    }
 }
 
-function permutationS(v,p)
-{
-    return Math.pow(v,p)
-}
+
 

@@ -16,3 +16,6 @@
     color: white;
     display: none;
 }
+.red::placeholder{
+    color: red;
+}
