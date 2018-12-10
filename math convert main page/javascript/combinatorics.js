@@ -11,6 +11,7 @@ function openTab(which)
         switches[i].style.backgroundColor = "rgb(0,30,61)";
     }
     document.getElementById(which).style.display="block";
+    document.getElementById(which).style.backgroundColor = "rgb(0, 43, 86)";
 }
 function factorial(a)
 {
