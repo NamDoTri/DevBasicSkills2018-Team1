@@ -183,6 +183,7 @@ input[type="string"]
 }
 
     /* Random Values */
+
 .randomvalues p
 {
     color: #cccccc;
@@ -231,7 +232,7 @@ footer
     #main,
     #numberSystemOutputs,
     .converter,
-    .truthtable
+    .truthtable,
     {
         text-align: center;
         width: 100%;
@@ -247,7 +248,7 @@ footer
         margin-right: auto;
         padding: 5px;
     }
-    .calc-1 td
+    .calc-1 td, .randomvalues
     {
         float: left;
     }
@@ -255,7 +256,7 @@ footer
     {
         line-height: 20px;
     }
-    .calc-1 td:nth-child(2)
+    .calc-1 td:nth-child(2), .randomvalues:nth-last-child(2)
     {
         clear: left;
     }
@@ -265,7 +266,5 @@ footer
         margin-right: auto;
         padding: 5px;
         width: 100%;
-    }
-    
-
+    }    
 }
