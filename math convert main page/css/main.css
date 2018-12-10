@@ -164,14 +164,22 @@ input[type="string"]
     font-size: 15px;
 }
     /* Truth Table */
+.truthtable_p
+{
+    color: #ffffff;
+    font-size: 15px;
+}
 #truthtable
 {
+    display:inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     float: left;
     color: #ffffff;
     border-collapse: collapse;
     text-align: center;
     width: 100%;
-    margin: 5px;
 }
 #truthtable th
 {
@@ -182,6 +190,7 @@ input[type="string"]
     border: 3px coral solid;
     padding: 7px;
 }
+
     /* Random Values */
 #statsTable label
 {
@@ -238,7 +247,6 @@ footer
     #main,
     #numberSystemOutputs,
     .converter,
-    .truthtable_1
     {
         text-align: center;
         width: 99%;
@@ -273,5 +281,17 @@ footer
         margin-right: auto;
         padding: 5px;
         width: 100%;
+    }
+    #truthtable
+    {
+        flex-wrap: wrap;
+        width: 100%;
+        font-size: 15px;
+        padding: 0;
+        margin: 0;
+    }
+    #truthtable th
+    {
+        font-size: 18px;
     }
 }
