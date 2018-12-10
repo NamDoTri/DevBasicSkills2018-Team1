@@ -55,6 +55,5 @@ for (let a = 0; a < arr.length; a++)
         }
     }
     truthtable += "</table><br>";
-    document.getElementById("truthtable").innerHTML += truthtable + "<br></br>";
+    document.getElementById("").innerHTML += truthtable + "<br></br>";
 }
-//document.write(truthtable);
