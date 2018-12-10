@@ -103,25 +103,36 @@ a:hover::before
 }
 
     /* Converter-1 */
+.wrapper
+{
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #ffffff;
+}
 .converter
 {
     margin-top: 25px;
-    display: flex;
-    justify-content: center;
 }
 .converter #box-1
 {
-    border: red 1px solid;
     color: #cccccc;
     font-size: 15px;
-    width: 49%;
+    width: 100%;
 }
 .converter #box-2
 {
-    border: red 1px solid;
     color: #cccccc;
     font-size: 15px;
-    width: 49%;
+    width: 100%;
+    table-layout: fixed;
+}
+#box-2 td
+{
+    border: 2px coral solid;
+    padding: 1px;
+    width: 25%;
 }
 
     /* Number convert */
@@ -132,7 +143,6 @@ a:hover::before
     text-align: left;
     font-weight: bold;
     overflow-x: auto;
-    /*border: 2px solid white;*/
 }
 input[type="number"]
 {
@@ -157,9 +167,17 @@ input[type="string"]
     font-size: 30px;
 }
     /* combinatorics */
+.combinatorics
+{
+    width: 100%;
+}   
+.switches:focus
+{
+    color: coral;
+    font-weight: bold;
+}
 .combinatorics p
 {
-    text-align: center;
     color: #cccccc;
     font-size: 15px;
 }
@@ -175,10 +193,10 @@ input[type="string"]
     display: flex;
     flex-direction: row;
     justify-content: center;
-    float: left;
     color: #ffffff;
     border-collapse: collapse;
     text-align: center;
+    table-layout: fixed;
     width: 100%;
 }
 #truthtable th
@@ -187,7 +205,7 @@ input[type="string"]
 }
 #truthtable th, #truthtable td
 {
-    border: 3px coral solid;
+    border: 2px coral solid;
     padding: 7px;
 }
 
@@ -247,6 +265,10 @@ footer
     #main,
     #numberSystemOutputs,
     .converter,
+    .combinatorics,
+    #Combinations
+    #result1,
+    #result2
     {
         text-align: center;
         width: 99%;
@@ -257,7 +279,7 @@ footer
     {
         padding-bottom: 20px;
     }
-    .calc-1
+    .calc-1,
     {
         margin-left: auto;
         margin-right: auto;
@@ -282,16 +304,30 @@ footer
         padding: 5px;
         width: 100%;
     }
-    #truthtable
+    #truthtable,
     {
         flex-wrap: wrap;
         width: 100%;
         font-size: 15px;
         padding: 0;
         margin: 0;
+        vertical-align: baseline;
+        justify-content: center;
     }
     #truthtable th
     {
         font-size: 18px;
+    }
+    .wrapper
+    {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 99%;
+        padding: 0;
+        margin: 0;
+    }
+    #box-2 th, #box-2 td
+    {
+        font-size: 25px;
     }
 }
