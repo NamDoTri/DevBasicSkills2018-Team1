@@ -163,6 +163,7 @@ input[type="string"]
     /* combinatorics */
 .combinatorics p
 {
+    text-align: center;
     color: #cccccc;
     font-size: 15px;
 }
@@ -175,23 +176,12 @@ input[type="string"]
     align-content: center;
     text-align: center;
     width: 20%;
-    font-size: 30px;
+    font-size: 25px;
 }
-.truthtable_2
-{
-    margin-left: 15px;
-    float: left;
-    color: #ffffff;
-    border-collapse: collapse;
-    align-content: center;
-    text-align: center;
-    width: 20%;
-    font-size: 30px;
-}
-.truthtable th, .truthtable td, .truthtable_2 th, .truthtable_2 td
+.truthtable_1 th, .truthtable_1 td,
 {
     border: 3px coral solid;
-    padding: 15px;
+    padding: 10px;
 }
     /* Random Values */
 #statsTable label
@@ -246,11 +236,12 @@ footer
     #main,
     #numberSystemOutputs,
     .converter,
-    .truthtable,
+    .truthtable_1
     {
         text-align: center;
-        width: 100%;
+        width: 99%;
         align-content: center;
+        margin: 5px;
     }
     header
     {
@@ -280,5 +271,5 @@ footer
         margin-right: auto;
         padding: 5px;
         width: 100%;
-    }    
+    }
 }
