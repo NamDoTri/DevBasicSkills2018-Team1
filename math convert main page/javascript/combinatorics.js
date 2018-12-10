@@ -26,8 +26,10 @@ function factorial(a)
 
 function combination()
 {
-    var n = document.getElementById("originalSet").value;
-    var k = document.getElementById("subset").value;
+    var n = Number(document.getElementById("originalSet").value);
+    var k = Number(document.getElementById("subset").value);
+    var output = n;
+    var a = factorial(n-k);
     if ( n == "")
     {
         document.getElementById("originalSet").placeholder = "Original set missing";
@@ -40,7 +42,13 @@ function combination()
         
     }
     else{
-        var output = Math.round(factorial(n)/(factorial(k) * factorial(n-k))) ;
+        while ( n > k + 1 )
+        {
+            n--;
+            output *= n;
+        }
+        console.log(output);
+        output = output/a;
         document.getElementById("result1").innerHTML = "There are " + output + " possible subsets.";
     }
 }
