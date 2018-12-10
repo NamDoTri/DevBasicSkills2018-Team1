@@ -27,17 +27,20 @@ function factorial(a)
 
 function combination(n,k)
 {
-    var output = (factorial(n)/(factorial(k) * factorial(n-k))) ;
-    document.getElementById("result").innerHTML = "There are " + output + " possible subsets."
+    var output = Math.round(factorial(n)/(factorial(k) * factorial(n-k))) ;
+    document.getElementById("result1").innerHTML = "There are " + output + " possible subsets."
 }
 
-function permutation(v)
+function permutation(n,k)
 {
-    return factorial(v);
+    if( document.getElementById("sampling").checked == false)
+    {
+        document.getElementById("result2").innerHTML = factorial(n)/factorial(n-k);
+    }
+    else{
+        document.getElementById("result2").innerHTML = Math.pow(n,k);
+    }
 }
 
-function permutationS(v,p)
-{
-    return Math.pow(v,p)
-}
+
 
