@@ -164,21 +164,23 @@ input[type="string"]
     font-size: 15px;
 }
     /* Truth Table */
-.truthtable
+#truthtable
 {
     float: left;
     color: #ffffff;
     border-collapse: collapse;
-    align-content: center;
     text-align: center;
-    width: 20%;
-    font-size: 30px;
-    font-weight: bold;
+    width: 100%;
     margin: 5px;
 }
-.truthtable_1 th, .truthtable_1 td,
+#truthtable th
 {
-    border: 1px white solid;
+    font-size: 20px;
+}
+#truthtable th, #truthtable td
+{
+    border: 3px coral solid;
+    padding: 7px;
 }
     /* Random Values */
 #statsTable label
