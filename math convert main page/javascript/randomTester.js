@@ -3,10 +3,12 @@ var test = [], previousNumber;
 
 function randomNumberGen(range,length)
 {
+    //check the length of set of numbers
     if( Number(document.getElementById("numberElements").value) > 1500)
     {
         window.alert("The number limit is 1500. Exceeding the limit may affect your device performance.");
     }
+
     else if(document.getElementById("generate").textContent == "Generate" && document.getElementById("numberRange").value != "" && document.getElementById("numberElements").value != "")
     {
         randomNumbers = [];
@@ -99,8 +101,8 @@ function showStats()
         document.getElementById("statsTable").innerHTML += "<tr> <td>" + test[i].showNumber() + "</td> <td>" + test[i].showDuplicate() + "</td> </tr>"
     }
 }
-function clearMessage()
+
+function changeButton()
 {
-    document.getElementsByClassName("infoMessage")[0].style.visibility = "hidden";
-    document.getElementsByClassName("infoMessage")[1].style.visibility = "hidden";
+    document.getElementById("generate").textContent = "Generate";
 }
