@@ -80,7 +80,7 @@ class numberCount
 
 function showStats()
 {
-    randomNumbers.sort();
+    randomNumbers.sort(function(a,b) {return a - b});
     for (let i = 0; i < randomNumbers.length; i++)
     {
         if( randomNumbers[i] !== previousNumber)
