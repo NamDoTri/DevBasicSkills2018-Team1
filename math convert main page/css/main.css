@@ -134,7 +134,7 @@ a:hover::before
 }
 #box-2 td
 {
-    border: 2px coral solid;
+    border: 2px darkgray solid;
     padding: 1px;
     width: 25%;
 }
@@ -165,6 +165,14 @@ input[type="string"]
     width: 150px;
 }
     /* 0-50 decimal */
+#numberSystemOutputs th
+{
+    position: sticky;
+    top: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
 #numberSystemOutputs td
 {
     text-align: center;
@@ -172,10 +180,13 @@ input[type="string"]
     font-size: 30px;
 }
     /* combinatorics */
-.combinatorics
+/* .combinatorics
 {
     width: 100%;
-}   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
 .switches:focus
 {
     color: coral;
@@ -205,11 +216,13 @@ input[type="string"]
 #truthtable th
 {
     font-size: 20px;
+    background-color: #00274e;
 }
 #truthtable th, #truthtable td
 {
-    border: 2px coral solid;
+    border: 2px darkgray solid;
     padding: 7px;
+    font-size: 20px;
 }
 
     /* Random Values */
@@ -336,5 +349,10 @@ footer
     #box-2 th, #box-2 td
     {
         font-size: 25px;
+    }
+    #box-2 th
+    {
+        position: sticky;
+        top: 0px;
     }
 }
