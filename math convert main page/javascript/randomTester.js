@@ -3,7 +3,11 @@ var test = [], previousNumber;
 
 function randomNumberGen(range,length)
 {
-    if(document.getElementById("generate").textContent == "Generate" && document.getElementById("numberRange").value != "" && document.getElementById("numberElements").value != "")
+    if( Number(document.getElementById("numberElements").value) > 1500)
+    {
+        window.alert("The number limit is 1500. Exceeding the limit may affect your device performance.");
+    }
+    else if(document.getElementById("generate").textContent == "Generate" && document.getElementById("numberRange").value != "" && document.getElementById("numberElements").value != "")
     {
         randomNumbers = [];
         test = [];
