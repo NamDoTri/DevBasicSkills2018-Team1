@@ -49,7 +49,17 @@ function combination()
         }
         console.log(output);
         output = output/a;
-        document.getElementById("result1").innerHTML = "There are " + output + " possible subsets.";
+        if ( output < 0)
+        {
+            document.getElementById("result1").innerHTML = "There is no possible subset.";    
+        }
+        else if ( isNaN(output) == true || output == Infinity )
+        {
+            document.getElementById("result1").innerHTML = "The result is too big.";
+        }
+        else{
+            document.getElementById("result1").innerHTML = "There are " + Math.round(output) + " possible subsets.";
+        }
     }
 }
 
