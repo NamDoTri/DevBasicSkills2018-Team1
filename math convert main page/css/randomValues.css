@@ -14,6 +14,7 @@ p
 #statsTable
 {
     border: 1px solid lightgray ;
+    display: block;
 }
 input
 {
@@ -29,4 +30,8 @@ input
 }
 .red::placeholder{
     color: red;
+}
+#numbersGenerated 
+{
+    display: none;
 }

@@ -1,5 +1,25 @@
 var randomNumbers = [];
 var test = [], previousNumber;
+class numberCount
+{
+    constructor(value)
+    {
+        this.value = value;
+        this.dupCount = 1;
+    }
+    incrementCount()
+    {
+        this.dupCount++;
+    }
+    showDuplicate()
+    {
+        return this.dupCount;
+    }
+    showNumber()
+    {
+        return this.value;
+    }
+}
 
 function randomNumberGen(range,length)
 {
@@ -8,7 +28,7 @@ function randomNumberGen(range,length)
     {
         window.alert("The number limit is 1500. Exceeding the limit may affect your device performance.");
     }
-
+    //generate numbers
     else if(document.getElementById("generate").textContent == "Generate" && document.getElementById("numberRange").value != "" && document.getElementById("numberElements").value != "")
     {
         randomNumbers = [];
@@ -20,23 +40,46 @@ function randomNumberGen(range,length)
         document.getElementById("numbersGenerated").innerHTML = randomNumbers.join(", ");
         document.getElementById("stats").style.visibility = "visible";
         document.getElementById("generate").textContent = "Reset";
+        // make "Hide numbers" button appear if the set is too long
         if ( document.getElementById("numberElements").value > 50)
         {
             document.getElementById("hideNumbers").style.visibility = "visible";   
         }
+        //print stats table
+        randomNumbers.sort(function(a,b) {return a - b});
+        for (let i = 0; i < randomNumbers.length; i++)
+        {
+            if( randomNumbers[i] !== previousNumber)
+            {
+                test.push( new numberCount(randomNumbers[i]));
+            }
+            else{
+                test[test.length - 1].incrementCount();
+            }
+            previousNumber = randomNumbers[i];
+        }
+        document.getElementById("statsTable").innerHTML = "<tr><label colspan=\"2\">Statistics</label></tr>";
+        document.getElementById("statsTable").innerHTML += "<tr> <td>Number</td> <td>Times</td> </tr>";
+        for ( let i  = 0; i < test.length; i++)
+        {
+            document.getElementById("statsTable").innerHTML += "<tr> <td>" + test[i].showNumber() + "</td> <td>" + test[i].showDuplicate() + "</td> </tr>"
+        }
     }
+    // display message when range is missing
     else if( document.getElementById("numberRange").value == "")
     {
         var range = document.getElementById("numberRange");
         range.className = "red";
         range.placeholder = "Range is missing";      
     }
+    //display message when length is missing
     else if( document.getElementById("numberElements").value == "")
     {
         var length = document.getElementById("numberElements");
         length.className = "red";
         length.placeholder = "Length is missing";
     }
+    //what the "Reset" button does
     else{
         document.getElementById("numbersGenerated").innerHTML = "";
         document.getElementById("numberElements").value = "";
@@ -59,46 +102,15 @@ function hideNumbers()
         document.getElementById("numbersGenerated").style.display = "block";
     }
 }
-class numberCount
+function showStats(button)
 {
-    constructor(value)
+    if (button.textContent == "Hide statistics")
     {
-        this.value = value;
-        this.dupCount = 1;
-    }
-    incrementCount()
-    {
-        this.dupCount++;
-    }
-    showDuplicate()
-    {
-        return this.dupCount;
-    }
-    showNumber()
-    {
-        return this.value;
-    }
-}
-
-function showStats()
-{
-    randomNumbers.sort(function(a,b) {return a - b});
-    for (let i = 0; i < randomNumbers.length; i++)
-    {
-        if( randomNumbers[i] !== previousNumber)
-        {
-            test.push( new numberCount(randomNumbers[i]));
-        }
-        else{
-            test[test.length - 1].incrementCount();
-        }
-        previousNumber = randomNumbers[i];
-    }
-    document.getElementById("statsTable").innerHTML = "<tr><label colspan=\"2\">Statistics</label></tr>";
-    document.getElementById("statsTable").innerHTML += "<tr> <td>Number</td> <td>Times</td> </tr>";
-    for ( let i  = 0; i < test.length; i++)
-    {
-        document.getElementById("statsTable").innerHTML += "<tr> <td>" + test[i].showNumber() + "</td> <td>" + test[i].showDuplicate() + "</td> </tr>"
+        document.getElementById("statsTable").style.display = "none";
+        button.textContent = "Show statistics";
+    }else{
+        button.textContent = "Hide statistics";
+        document.getElementById("statsTable").style.display = "block";  
     }
 }
 
