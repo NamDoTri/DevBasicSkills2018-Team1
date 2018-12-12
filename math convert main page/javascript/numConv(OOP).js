@@ -77,19 +77,22 @@ function printResult(inputNum,inputType) //print the results to input boxes
         document.getElementById("hex").value = fromDec(inputNum,16);        
         break;
         case "bin":
-        for ( let i = 0; i < Array.from(inputNum).length; i++)
+        var isBin = true;
+        for ( i of Array.from(inputNum))
         {
-            console.log(inputNum);
-            if(Array.from(inputNum)[i] == 0 || (Array.from(inputNum)[i] == 1) )
+            if( !(i == 0 || i == 1) )
             {
-                document.getElementById("dec").value = takeIn(inputNum,2,10);
-                document.getElementById("oct").value = takeIn(inputNum,2,8);
-                document.getElementById("hex").value = takeIn(inputNum,2,16);
-                document.getElementsByClassName("error")[0].style.visibility = "hidden";
+                isBin = false;   
             }
-            else{
-                document.getElementsByClassName("error")[0].style.visibility = "visible";
-            }
+        }
+        if (isBin == true)
+        {
+            document.getElementById("dec").value = takeIn(inputNum,2,10);
+            document.getElementById("oct").value = takeIn(inputNum,2,8);
+            document.getElementById("hex").value = takeIn(inputNum,2,16);
+            document.getElementsByClassName("error")[0].style.visibility = "hidden";
+        }else{
+            document.getElementsByClassName("error")[0].style.visibility = "visible";
         }
         break;
         case "oct":
@@ -105,18 +108,22 @@ function printResult(inputNum,inputType) //print the results to input boxes
             }
         break;
         case "hex":
+        var isHex = true;
         for (let i = 0; i < Array.from(inputNum).length; i++)
         {
             if( isNaN(parseInt(Array.from(inputNum)[i],16)))
             {
-                document.getElementsByClassName("error")[2].style.visibility = "visible";    
+                isHex = false;
             }
-            else{
-                document.getElementById("dec").value = takeIn(inputNum,16,10);
-                document.getElementById("bin").value = takeIn(inputNum,16,2);
-                document.getElementById("oct").value = takeIn(inputNum,16,8);
-                document.getElementsByClassName("error")[2].style.visibility = "hidden";
         }
+        if (isHex == true)
+        {
+            document.getElementById("dec").value = takeIn(inputNum,16,10);
+            document.getElementById("bin").value = takeIn(inputNum,16,2);
+            document.getElementById("oct").value = takeIn(inputNum,16,8);
+            document.getElementsByClassName("error")[2].style.visibility = "hidden";
+        }else{
+            document.getElementsByClassName("error")[2].style.visibility = "visible"; 
         }
         break;
     }
