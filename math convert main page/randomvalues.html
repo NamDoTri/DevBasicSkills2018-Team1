@@ -44,11 +44,11 @@
             <input type="number" max="1500" id="numberElements" placeholder="Input Number of Elements" onkeydown="changeButton()" onkeypress="if(event.keyCode == 13) randomNumberGen(document.getElementById('numberRange').value,document.getElementById('numberElements').value)"> 
             <br>
             <button id="generate" onclick="randomNumberGen(document.getElementById('numberRange').value,document.getElementById('numberElements').value)">Generate</button>
-            <button id="hideNumbers" onclick="hideNumbers()">Hide numbers</button>
+            <button id="hideNumbers" onclick="hideNumbers()">Show numbers</button>
             <p id="numbersGenerated"></p>
             <br>&nbsp;
             <div id="stats">
-                <button id="showStats" onclick="showStats()">Show statistics</button>
+                <button id="showStats" onclick="showStats()">Hide statistics</button>
                 <br>&nbsp;
                 <table id="statsTable" style="color: white">
                 </table>
