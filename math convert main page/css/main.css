@@ -104,14 +104,14 @@ a:hover::before
     transform: scaleX(1);
     transform-origin: bottom center;
 }
-
     /* Converter-1 */
 .wrapper
 {
     display: inline-block;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
+    margin-left: 110px;
     color: #ffffff;
 }
 .converter
@@ -138,7 +138,6 @@ a:hover::before
     padding: 1px;
     width: 25%;
 }
-
     /* Number convert */
 .converter td
 {
@@ -148,7 +147,6 @@ a:hover::before
     font-weight: bold;
     overflow-x: auto;
 }
-
 input[type="number"]
 {
     font-size: 20px;
@@ -180,13 +178,12 @@ input[type="string"]
     font-size: 30px;
 }
     /* combinatorics */
-/* .combinatorics
+.combinatorics
 {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
+    margin: auto;
+    padding: 10px;
+    width: 83%;
+}
 .switches:focus
 {
     color: coral;
@@ -208,10 +205,11 @@ input[type="string"]
 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     color: #ffffff;
     border-collapse: collapse;
     text-align: center;
+    margin-left: 110px;
 }
 #truthtable th
 {
@@ -224,8 +222,12 @@ input[type="string"]
     padding: 7px;
     font-size: 20px;
 }
-
     /* Random Values */
+.randomValues
+{
+    margin: auto;
+    width: 83%;
+}
 #statsTable label
 {
     text-align: center;
@@ -248,7 +250,6 @@ input[type="string"]
     float: left;
     width: 65%;
  }
-
  aside#sidebar
  {
      float: right;
@@ -270,7 +271,6 @@ footer
 {
     padding-left: 8px;
 }
-
     /* Media Quaries */
 @media screen and (min-width : 320px) and (max-width : 1024px)
 {
@@ -284,12 +284,12 @@ footer
     .combinatorics,
     #Combinations
     #result1,
-    #result2
+    #result2,
+    .calculator
     {
         text-align: center;
         width: 99%;
         align-content: center;
-        margin: 5px;
     }
     .truthtable_p
     {

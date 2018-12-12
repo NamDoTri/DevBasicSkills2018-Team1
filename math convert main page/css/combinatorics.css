@@ -15,7 +15,6 @@
     /*border: 2px solid white;*/
     color: white;
     display: none;
-    width: 350px;
     height: 220px;
 }
 .red::placeholder{
