@@ -69,62 +69,76 @@ function takeIn(inputNum, originalBase, targetBase) //convert among different nu
 }
 function printResult(inputNum,inputType) //print the results to input boxes
 {
+
+    //Validating input
+    var isValid = true;
     switch(inputType)
     {
-        case "dec":
-        document.getElementById("bin").value = fromDec(inputNum,2);
-        document.getElementById("oct").value = fromDec(inputNum,8);
-        document.getElementById("hex").value = fromDec(inputNum,16);        
-        break;
-        case "bin":
-        var isBin = true;
-        for ( i of Array.from(inputNum))
+        case "dec": 
+        if( /[-.+]/g.test(String(inputNum)) == true )
         {
-            if( !(i == 0 || i == 1) )
-            {
-                isBin = false;   
-            }
+            isValid = false;
         }
-        if (isBin == true)
+        break;
+
+        case "bin":
+        if ( /[^01]/g.test(String(inputNum)) == true )
         {
+            isValid = false;
+        }
+        break;
+
+        case "oct":
+        if ( /[789]/g.test(String(inputNum)) == true)
+        {
+            isValid = false;
+        } 
+        break;
+
+        case "hex":
+        if ( /[^0123456789ABCDEF]/g.test(String(inputNum).toUpperCase()) == true)
+        {
+            isValid = false;
+        }
+    }
+    //print out results
+    if (isValid == true)
+    {
+        switch(inputType)
+        {
+            case "dec":
+            document.getElementById("bin").value = fromDec(inputNum,2);
+            document.getElementById("oct").value = fromDec(inputNum,8);
+            document.getElementById("hex").value = fromDec(inputNum,16);    
+            document.getElementsByClassName("error")[0].style.visibility = "hidden";    
+            break;
+            case "bin":
             document.getElementById("dec").value = takeIn(inputNum,2,10);
             document.getElementById("oct").value = takeIn(inputNum,2,8);
             document.getElementById("hex").value = takeIn(inputNum,2,16);
-            document.getElementsByClassName("error")[0].style.visibility = "hidden";
-        }else{
-            document.getElementsByClassName("error")[0].style.visibility = "visible";
-        }
-        break;
-        case "oct":
-            if ( (Array.from(inputNum).indexOf("8") == -1) && (Array.from(inputNum).indexOf("9") == -1) )
-            {
-                document.getElementById("dec").value = takeIn(inputNum,8,10);
-                document.getElementById("bin").value = takeIn(inputNum,8,2);
-                document.getElementById("hex").value = takeIn(inputNum,8,16);
-                document.getElementsByClassName("error")[1].style.visibility = "hidden";
-            }
-            else{
-                document.getElementsByClassName("error")[1].style.visibility = "visible";
-            }
-        break;
-        case "hex":
-        var isHex = true;
-        for (let i = 0; i < Array.from(inputNum).length; i++)
-        {
-            if( isNaN(parseInt(Array.from(inputNum)[i],16)))
-            {
-                isHex = false;
-            }
-        }
-        if (isHex == true)
-        {
+            document.getElementsByClassName("error")[1].style.visibility = "hidden";
+            break;
+            case "oct":
+            document.getElementById("dec").value = takeIn(inputNum,8,10);
+            document.getElementById("bin").value = takeIn(inputNum,8,2);
+            document.getElementById("hex").value = takeIn(inputNum,8,16);
+            document.getElementsByClassName("error")[2].style.visibility = "hidden";
+            break;
+            case "hex":
             document.getElementById("dec").value = takeIn(inputNum,16,10);
             document.getElementById("bin").value = takeIn(inputNum,16,2);
             document.getElementById("oct").value = takeIn(inputNum,16,8);
-            document.getElementsByClassName("error")[2].style.visibility = "hidden";
-        }else{
-            document.getElementsByClassName("error")[2].style.visibility = "visible"; 
+            document.getElementsByClassName("error")[3].style.visibility = "hidden";
+            break;
         }
-        break;
-    }
+    }else{
+        //display error messages
+        switch(inputType)
+        {
+            case "dec": document.getElementsByClassName("error")[0].style.visibility = "visible"; break;
+            case "bin": document.getElementsByClassName("error")[1].style.visibility = "visible"; break;
+            case "oct": document.getElementsByClassName("error")[2].style.visibility = "visible"; break;
+            case "hex": document.getElementsByClassName("error")[3].style.visibility = "visible"; break;
+        }
+    }  
 }
