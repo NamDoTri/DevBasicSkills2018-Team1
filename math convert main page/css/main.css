@@ -282,12 +282,12 @@ footer
     .combinatorics,
     #Combinations
     #result1,
-    #result2
+    #result2,
+    .calculator
     {
         text-align: center;
         width: 99%;
         align-content: center;
-        margin: 5px;
     }
     .truthtable_p
     {
