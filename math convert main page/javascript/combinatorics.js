@@ -1,4 +1,4 @@
-function openTab(which)
+function openTab(which, button)
 {
     var calc = document.getElementsByClassName("calculator");
     for (let i = 0; i < calc.length; i++)
@@ -9,8 +9,10 @@ function openTab(which)
     for (let i = 0; i < switches.length; i++)
     {
         switches[i].style.backgroundColor = "rgb(0,30,61)";
+        switches[i].style.color = "white";
     }
     document.getElementById(which).style.display="block";
+    button.style.color ="coral";
     // document.getElementById(which).style.backgroundColor = "rgb(0, 43, 86)";
 }
 function factorial(a)
