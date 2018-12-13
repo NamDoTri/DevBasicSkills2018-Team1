@@ -184,7 +184,7 @@ input[type="string"]
     margin: auto;
     padding: 10px;
     width: 83%;
-    line-height: 35px;
+    line-height: 30px;
 }
 .switches:focus
 {
@@ -313,6 +313,7 @@ footer
     .calc-1 td, .randomvalues
     {
         float: left;
+        margin-left: 50px;
     }
     .calc-1 tr
     {
