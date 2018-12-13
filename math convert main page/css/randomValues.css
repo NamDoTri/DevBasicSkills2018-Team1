@@ -34,3 +34,6 @@ input
 {
     display: none;
 }
+.randomValues span{
+    font-size: 15px;
+}

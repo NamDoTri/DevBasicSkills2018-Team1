@@ -9,6 +9,7 @@
     <meta name="keywords" content="web convert, Math Converters, Truth Tables, binary, hex, oct, decimal, random values, numbers">
     <meta name="author" content="Eetu Heikkinen, Nam Do">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/errorMessages.css">
     <link rel="stylesheet" type="text/css" href="./css/randomValues.css">
     <link rel="icon" type="image" href="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/calculator-512.png">
     <script src="./javascript/randomTester.js"></script>
@@ -43,6 +44,7 @@
             <input type="number" id="numberRange" placeholder="Input Range" onkeydown="changeButton()" onkeypress="if(event.keyCode == 13) randomNumberGen(document.getElementById('numberRange').value,document.getElementById('numberElements').value)"> 
             <br>
             <input type="number" max="1500" id="numberElements" placeholder="Input Number of Elements" onkeydown="changeButton()" onkeypress="if(event.keyCode == 13) randomNumberGen(document.getElementById('numberRange').value,document.getElementById('numberElements').value)"> 
+            <span class="error" id="error">Length must be a natural number.</span>
             <br>
             <button id="generate" onclick="randomNumberGen(document.getElementById('numberRange').value,document.getElementById('numberElements').value)">Generate</button>
             <button id="hideNumbers" onclick="hideNumbers()">Show numbers</button>

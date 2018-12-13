@@ -30,8 +30,11 @@ function randomNumberGen(range,length)
     }
     else if(length % 1 != 0)
     {
-        document.getElementById("numberElements").value = "";
-        document.getElementById("numberElements").className = "red";
+        document.getElementById("error").style.visibility = "visible";
+    }
+    else if (length < 0)
+    {
+        document.getElementById("error").style.visibility = "visible";
     }
     //generate numbers
     else if(document.getElementById("generate").textContent == "Generate" && document.getElementById("numberRange").value != "" && document.getElementById("numberElements").value != "")
@@ -43,9 +46,11 @@ function randomNumberGen(range,length)
             randomNumbers.push( Math.round(Math.random()* range) );
         }
         document.getElementById("numbersGenerated").innerHTML = randomNumbers.join(", ");
+        // show/hide buttons
         document.getElementById("stats").style.visibility = "visible";
         document.getElementById("hideNumbers").style.visibility = "visible";
         document.getElementById("generate").textContent = "Reset";
+        document.getElementById("error").style.visibility = "hidden";
         //print stats table
         randomNumbers.sort(function(a,b) {return a - b});
         for (let i = 0; i < randomNumbers.length; i++)
