@@ -44,6 +44,7 @@ function randomNumberGen(range,length)
         }
         document.getElementById("numbersGenerated").innerHTML = randomNumbers.join(", ");
         document.getElementById("stats").style.visibility = "visible";
+        document.getElementById("hideNumbers").style.visibility = "visible";
         document.getElementById("generate").textContent = "Reset";
         //print stats table
         randomNumbers.sort(function(a,b) {return a - b});
