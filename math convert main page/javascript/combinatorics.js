@@ -13,7 +13,6 @@ function openTab(which, button)
     }
     document.getElementById(which).style.display="block";
     button.style.color ="coral";
-    // document.getElementById(which).style.backgroundColor = "rgb(0, 43, 86)";
 }
 function factorial(a)
 {
@@ -49,7 +48,6 @@ function combination()
             n--;
             output *= n;
         }
-        console.log(output);
         output = output/a;
         if ( output < 0)
         {

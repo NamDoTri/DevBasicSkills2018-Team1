@@ -10,9 +10,6 @@
     background-color: rgb(0, 43, 86);
     color: coral;
 }
-.switches:active{
-    color: coral;
-}
 .calculator
 {
     /*border: 2px solid white;*/

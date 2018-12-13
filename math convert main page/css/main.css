@@ -189,11 +189,7 @@ input[type="string"]
     width: 83%;
     line-height: 30px;
 }
-.switches:focus
-{
-    color: coral;
-    font-weight: bold;
-}
+
 .combinatorics p
 {
     color: #cccccc;
