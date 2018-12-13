@@ -110,7 +110,7 @@ a:hover::before
     display: inline-block;
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: center;
     margin-left: 110px;
     color: #ffffff;
 }
@@ -180,6 +180,8 @@ input[type="string"]
     /* combinatorics */
 .combinatorics
 {
+    align-content: center;
+    text-align: center;
     margin: auto;
     padding: 10px;
     width: 83%;
@@ -205,11 +207,10 @@ input[type="string"]
 {
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: center;
     color: #ffffff;
     border-collapse: collapse;
     text-align: center;
-    margin-left: 110px;
 }
 #truthtable th
 {
@@ -225,6 +226,8 @@ input[type="string"]
     /* Random Values */
 .randomValues
 {
+    text-align: center;
+    align-content: center;
     margin: auto;
     width: 83%;
 }
@@ -232,10 +235,11 @@ input[type="string"]
 {
     text-align: center;
 }
-.randomvalues p
+.randomValues p
 {
     color: #cccccc;
     font-size: 15px;
+    text-align: center;
 }
     /* Optional Math page */
 .optionalmath p
