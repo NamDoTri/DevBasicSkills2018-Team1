@@ -24,9 +24,14 @@ class numberCount
 function randomNumberGen(range,length)
 {
     //check the length of set of numbers
-    if( Number(document.getElementById("numberElements").value) > 1500)
+    if(length > 1500)
     {
         window.alert("The number limit is 1500. Exceeding the limit may affect your device performance.");
+    }
+    else if(length % 1 != 0)
+    {
+        document.getElementById("numberElements").value = "";
+        document.getElementById("numberElements").className = "red";
     }
     //generate numbers
     else if(document.getElementById("generate").textContent == "Generate" && document.getElementById("numberRange").value != "" && document.getElementById("numberElements").value != "")
@@ -40,11 +45,6 @@ function randomNumberGen(range,length)
         document.getElementById("numbersGenerated").innerHTML = randomNumbers.join(", ");
         document.getElementById("stats").style.visibility = "visible";
         document.getElementById("generate").textContent = "Reset";
-        // make "Hide numbers" button appear if the set is too long
-        if ( document.getElementById("numberElements").value > 50)
-        {
-            document.getElementById("hideNumbers").style.visibility = "visible";   
-        }
         //print stats table
         randomNumbers.sort(function(a,b) {return a - b});
         for (let i = 0; i < randomNumbers.length; i++)

@@ -39,6 +39,7 @@
     <div class="container">
         <div class="randomValues">
             <p>This tool creates a set of random numbers and allows you to see how many times each number shows up.</p>
+            <p> <b>N.B:</b> Only whole numbers are accepted.</p>
             <input type="number" id="numberRange" placeholder="Input Range" onkeydown="changeButton()" onkeypress="if(event.keyCode == 13) randomNumberGen(document.getElementById('numberRange').value,document.getElementById('numberElements').value)"> 
             <br>
             <input type="number" max="1500" id="numberElements" placeholder="Input Number of Elements" onkeydown="changeButton()" onkeypress="if(event.keyCode == 13) randomNumberGen(document.getElementById('numberRange').value,document.getElementById('numberElements').value)"> 

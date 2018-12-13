@@ -20,6 +20,3 @@
     display: none;
     height: 220px;
 }
-.red::placeholder{
-    color: red;
-}

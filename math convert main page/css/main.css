@@ -39,6 +39,9 @@ button
 button:hover{
     cursor: pointer;
 }
+.red::placeholder{
+    color: red;
+}
 
     /* Header */
 header h1
