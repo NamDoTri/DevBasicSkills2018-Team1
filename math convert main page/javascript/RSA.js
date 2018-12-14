@@ -34,6 +34,7 @@ function generateKey(n,e)
 
     }else{*/
     //find the number p
+    console.log(n + "  " + e );
     var i = 2;
     var prime = [];
     do
@@ -56,8 +57,6 @@ function generateKey(n,e)
             ds.push(d);
         }
         m++;
-    }while(ds.length < 1)
-    return ds[0]
-    }
-
-console.log(generateKey(1073602561,997))
+    }while(ds.length < 1);  
+    document.getElementById("generatedKey").innerHTML = "The result is: " + ds[0];
+}

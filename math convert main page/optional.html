@@ -43,9 +43,9 @@
             <p>Lets figure out some optional math</p>
             <input type="number" id="nNumber"><br>
             <input type="number" id="eNumber"><br>
-            <button onclick="generateKey()">Generate</button>
+            <button onclick="generateKey(document.getElementById('nNumber').value, document.getElementById('eNumber').value)">Generate</button>
         </div>
-        <h3></h3>
+        <h3 id="generatedKey"></h3>
     </div>
 </body>
 </html>
