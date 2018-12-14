@@ -110,7 +110,6 @@ a:hover::before
     /* Converter-1 */
 .wrapper
 {
-    display: inline-block;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -230,9 +229,12 @@ input[type="string"]
     margin: auto;
     width: 83%;
 }
-#statsTable label
+#stats
 {
+    margin: auto;
     text-align: center;
+    align-content: center;
+    width: 15%;
 }
 .randomValues p
 {
@@ -288,10 +290,16 @@ footer
     #Combinations
     #result1,
     #result2,
-    .calculator
+    .calculator,
     {
         text-align: center;
         width: 99%;
+        align-content: center;
+    }
+    #stats
+    {
+        text-align: center;
+        width: 50%;
         align-content: center;
     }
     .truthtable_p
