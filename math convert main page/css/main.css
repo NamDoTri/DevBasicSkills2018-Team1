@@ -193,6 +193,7 @@ input[type="string"]
 {
     color: #cccccc;
     font-size: 15px;
+    text-align: center;
 }
     /* Truth Table */
 .truthtable_p
