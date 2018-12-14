@@ -58,7 +58,7 @@ function combination()
             document.getElementById("result1").innerHTML = "The result is too big.";
         }
         else{
-            document.getElementById("result1").innerHTML = "There are " + Math.round(output) + " possible subsets.";
+            document.getElementById("result1").innerHTML = "There are " + Math.floor(output) + " possible subsets.";
         }
     }
 }
