@@ -38,16 +38,16 @@
     </section>
     <div class="container">
         <div class="combinatorics">
-            <p>Combinatorics will come on this page</p>
+            <p>Combination and Permutation will be calculated in this page</p>
                 <button class="switches" style="color:coral" onclick="openTab('Combination', this)" >Combination</button>
                 <button class="switches" onclick="openTab('Permutation', this)">Permutation</button>
-            <div id="Combination" class="calculator" style="display:block"> This is combination <br>
+            <div id="Combination" class="calculator" style="display:block"> How many subsets can be formed from the original set <br>
                 <input id="originalSet" type="number" placeholder="Length of original set" onchange="combination()"><br>
                 <input id="subset" type="number" placeholder="Length of each subset" onchange="combination()"><br><br>
                 <button onclick="combination()">Calculate</button>
                 <div id="result1"></div>
             </div>
-            <div id="Permutation" class="calculator"> This is permutation <br>
+            <div id="Permutation" class="calculator"> This calculated how many possible ways to form a list <br>
                 <input type="number" id="original" placeholder="Length of Original Set" onkeydown="if(event.keyCode == 13) permutation()"> <br>
                 <input type="number" id="vacancies" placeholder="Number of vacancies" onkeydown="if(event.keyCode == 13) permutation()"> <br>
                 <input type="checkbox" id="sampling">Sampling with replacement <br>
