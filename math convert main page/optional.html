@@ -9,6 +9,7 @@
     <meta name="keywords" content="web convert, Math Converters, Truth Tables, binary, hex, oct, decimal, random values, numbers">
     <meta name="author" content="Eetu Heikkinen, Nam Do">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/errorMessages.css">
     <link rel="icon" type="image" href="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/calculator-512.png">
     <script src="./javascript/main.js"></script>
     <script src="./javascript/RSA.js"></script>
@@ -43,6 +44,7 @@
             <p>This tool generates RSA private key from a public one.</p>
             <input type="number" id="nNumber"><br>
             <input type="number" id="eNumber"><br>
+            <span class="error">This may not be a valid public key. Please try another one.</span><br>
             <button onclick="generateKey(document.getElementById('nNumber').value, document.getElementById('eNumber').value)">Generate</button>
         </div>
         <h3 id="generatedKey"></h3>

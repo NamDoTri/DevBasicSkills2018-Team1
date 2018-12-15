@@ -13,7 +13,7 @@ function findDivisors(num)
 function validate(num)
 {
     //check if the number is whole nnumber or not
-    if ( /./.test(num) == true)
+    if ( /\./.test(num) == true)
     {
         return false;
     }
@@ -25,14 +25,14 @@ function validate(num)
 }
 function generateKey(n,e)
 {
-    /*if( validate(n) == false)
+    if( validate(n) == false)
     {
-
+        document.getElementsByClassName("error")[0].style.visibility = "visible";
     }
     else if ( validate(e) == false)
     {
-
-    }else{*/
+        document.getElementsByClassName("error")[0].style.visibility = "visible";
+    }else{
     //find the number p
     console.log(n + "  " + e );
     var i = 2;
@@ -58,5 +58,7 @@ function generateKey(n,e)
         }
         m++;
     }while(ds.length < 1);  
+    document.getElementsByClassName("error")[0].style.visibility = "hidden";
     document.getElementById("generatedKey").innerHTML = "The result is: " + ds[0];
+    }
 }
