@@ -31,7 +31,7 @@ function generateKey(n,e)
     {
         document.getElementsByClassName("error")[0].style.visibility = "visible";
     }
-    else if ( validate(e) == false)
+    else if ( findDivisors(e).length > 2)
     {
         document.getElementsByClassName("error")[0].style.visibility = "visible";
     }else if( n == "" || e == "")
@@ -69,9 +69,16 @@ function generateKey(n,e)
         }
         m++;
     }while(ds.length < 1);  
-    document.getElementsByClassName("error")[0].style.visibility = "hidden";
     document.getElementById("generatedKey").innerHTML = "The result is: " + ds[0];
+    document.getElementById("generatedKey").style.border="1.5px solid lightgray";
+}
+}
+function clearAll()
+{
+    console.log("wtd");
+    document.getElementById("generatedKey").innerHTML = "";
+    document.getElementById("generatedKey").style.borderStyle = "none";
     document.getElementsByTagName("input")[0].placeholder = "First part";
     document.getElementsByTagName("input")[1].placeholder = "Second part";
-    }
+    document.getElementsByClassName("error")[0].style.visibility = "hidden";
 }
