@@ -244,10 +244,25 @@ input[type="string"]
     text-align: center;
 }
     /* Optional Math page */
+.optionalmath
+ {
+     align-content: center;
+     text-align: center;
+ }
+ .optionalmath button
+{
+    margin-top: 10px;
+}
 .optionalmath p
 {
     color: #cccccc;
     font-size: 15px;
+}
+#generatedKey
+{
+    color: #cccccc;
+    font-size: 20px;
+    text-align: center;
 }
     /* About page */
  article#main-col
@@ -292,6 +307,8 @@ footer
     #result1,
     #result2,
     .calculator,
+    .optionalmath,
+    #generatedKey
     {
         text-align: center;
         width: 99%;
@@ -305,7 +322,7 @@ footer
     }
     .truthtable_p
     {
-        margin-left: 25px;
+        text-align: center;
         width: 100%
     }
     header
@@ -321,7 +338,6 @@ footer
     .calc-1 td, .randomvalues
     {
         float: left;
-        margin-left: 50px;
     }
     .calc-1 tr
     {
