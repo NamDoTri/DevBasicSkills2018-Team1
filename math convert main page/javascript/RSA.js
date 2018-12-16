@@ -72,7 +72,6 @@ function generateKey(n,e)
         m++;
     }while(ds.length < 1);  
     document.getElementById("generatedKey").innerHTML = "The result is: " + ds[0];
-    document.getElementById("generatedKey").style.border="1.5px solid lightgray";
 }
 }
 function clearAll()
