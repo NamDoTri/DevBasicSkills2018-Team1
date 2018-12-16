@@ -38,6 +38,8 @@ function generateKey(n,e)
     {
         document.getElementsByTagName("input")[0].placeholder = "Number missing";
         document.getElementsByTagName("input")[1].placeholder = "Number missing";
+        document.getElementsByTagName("input")[0].className = "red";
+        document.getElementsByTagName("input")[1].className = "red";
     }
     else if(  n-e < 0 )
     {
@@ -80,5 +82,7 @@ function clearAll()
     document.getElementById("generatedKey").style.borderStyle = "none";
     document.getElementsByTagName("input")[0].placeholder = "First part";
     document.getElementsByTagName("input")[1].placeholder = "Second part";
+    document.getElementsByTagName("input")[0].classList.remove("red");
+    document.getElementsByTagName("input")[1].classList.remove("red");
     document.getElementsByClassName("error")[0].style.visibility = "hidden";
 }
