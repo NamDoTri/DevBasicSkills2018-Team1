@@ -1,12 +1,14 @@
 function findDivisors(num)
 {
+    var i = 1;
     var divisors = [];
-    for ( let i = 1; i <= num; i++)
+    while ( i <= num && divisors.length < 6)
     {
         if ( num % i == 0)
         {
             divisors.push(i);
         }
+        i++;
     }
     return divisors;
 }
@@ -32,7 +34,16 @@ function generateKey(n,e)
     else if ( validate(e) == false)
     {
         document.getElementsByClassName("error")[0].style.visibility = "visible";
-    }else{
+    }else if( n == "" || e == "")
+    {
+        document.getElementsByTagName("input")[0].placeholder = "Number missing";
+        document.getElementsByTagName("input")[1].placeholder = "Number missing";
+    }
+    else if(  n-e < 0 )
+    {
+        document.getElementsByClassName("error")[0].style.visibility = "visible";
+    }
+    else{
     //find the number p
     console.log(n + "  " + e );
     var i = 2;
@@ -60,5 +71,7 @@ function generateKey(n,e)
     }while(ds.length < 1);  
     document.getElementsByClassName("error")[0].style.visibility = "hidden";
     document.getElementById("generatedKey").innerHTML = "The result is: " + ds[0];
+    document.getElementsByTagName("input")[0].placeholder = "First part";
+    document.getElementsByTagName("input")[1].placeholder = "Second part";
     }
 }
