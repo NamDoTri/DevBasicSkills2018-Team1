@@ -387,4 +387,8 @@ footer
         position: sticky;
         top: 0px;
     }
+    .optionalmath button
+    {
+        margin-top: 0px;
+    }
 }
