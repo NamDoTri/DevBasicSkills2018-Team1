@@ -1,3 +1,4 @@
+//Show or Clear the number system outputs table
 function showClear()
 {
     var buttonID = document.getElementById("showClearButton");
@@ -12,4 +13,3 @@ function showClear()
         buttonID.textContent = "Show";
     }
 }
-//document.addEventListener("keydown",)

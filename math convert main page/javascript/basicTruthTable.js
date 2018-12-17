@@ -1,7 +1,9 @@
+//values for each cell of the table
 const arr=[  ["~P ^ Q", 0, 0, 1, 0],
              ["~P v Q", 0, 1, 1, 0],
               ["~P ⊕ Q", 1, 0, 0, 1],
              ["~P ⇒ Q", 1, 1, 1, 0] ];
+//print out tables (the loop is repeated 4 times)
 for (let a = 0; a < arr.length; a++)
 {
     var truthtable = "";

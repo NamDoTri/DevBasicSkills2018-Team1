@@ -1,6 +1,6 @@
 var randomNumbers = [];
 var test = [], previousNumber;
-class numberCount
+class numberCount //each number in the set is an object
 {
     constructor(value)
     {
@@ -96,6 +96,7 @@ function randomNumberGen(range,length)
         document.getElementById("hideNumbers").style.visibility = "hidden";
     }
 }
+// Hide or Show the set of numbers generated
 function hideNumbers()
 {
     if ( document.getElementById("hideNumbers").textContent == "Hide numbers")
@@ -108,6 +109,7 @@ function hideNumbers()
         document.getElementById("numbersGenerated").style.display = "block";
     }
 }
+// Show or Hide the statistics table about the generated numbet set
 function showStats(button)
 {
     if (button.textContent == "Hide statistics")
@@ -120,6 +122,7 @@ function showStats(button)
     }
 }
 
+//change title of the button
 function changeButton()
 {
     document.getElementById("generate").textContent = "Generate";
