@@ -39,6 +39,7 @@
     <div class="container">
         <div class="optionalmath">
             <p>This tool generates RSA private key from a public one.</p>
+            <p>Please enter the public key to boxes below. The first part is the number before the comma.</p>
             <span class="error">This may not be a valid public key. Please try another one.</span><br>
             <input type="number" id="nNumber" placeholder="First part" onkeydown="clearAll()" onkeypress="if(event.keyCode == 13) generateKey(this.value, document.getElementById('eNumber').value)"><br>
             <input type="number" id="eNumber" placeholder="Second part" onkeydown="clearAll()" onkeypress="if(event.keyCode == 13) generateKey(document.getElementById('nNumber').value, this.value)"><br>
