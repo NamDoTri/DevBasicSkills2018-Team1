@@ -258,6 +258,9 @@ input[type="string"]
     color: #cccccc;
     font-size: 15px;
 }
+.optionalmath input{
+    margin-bottom: 30px;
+}
 #generatedKey
 {
     color: #cccccc;

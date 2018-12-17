@@ -1,3 +1,4 @@
+//check if the input number is a prime/semi-prime number
 function findDivisors(num)
 {
     var i = 1;
@@ -27,6 +28,7 @@ function validate(num)
 }
 function generateKey(n,e)
 {
+    //first input numbers need to be validated
     if( validate(n) == false)
     {
         document.getElementsByClassName("error")[0].style.visibility = "visible";
@@ -45,11 +47,11 @@ function generateKey(n,e)
     {
         document.getElementsByClassName("error")[0].style.visibility = "visible";
     }
+    //now the key generation is implemented
     else{
-    //find the number p
-    console.log(n + "  " + e );
     var i = 2;
     var prime = [];
+    //find number p
     do
     {
         if ( n % i == 0)
@@ -58,6 +60,7 @@ function generateKey(n,e)
         }
         i++;
     }while (prime.length < 1)
+    //calculate the decrypting number
     var p = prime[0];
     var q = n / p;
     var ds=[];
@@ -74,9 +77,9 @@ function generateKey(n,e)
     document.getElementById("generatedKey").innerHTML = "The result is: " + ds[0];
 }
 }
+//Clear error messages and previous result
 function clearAll()
 {
-    console.log("wtd");
     document.getElementById("generatedKey").innerHTML = "";
     document.getElementById("generatedKey").style.borderStyle = "none";
     document.getElementsByTagName("input")[0].placeholder = "First part";

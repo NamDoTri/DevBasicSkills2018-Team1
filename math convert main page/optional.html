@@ -10,7 +10,6 @@
     <meta name="author" content="Eetu Heikkinen, Nam Do">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css">
     <link rel="stylesheet" type="text/css" href="./css/errorMessages.css">
-    <link rel="stylesheet" type="text/css" href="./css/rsa.css">
     <link rel="icon" type="image" href="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/calculator-512.png">
     <script src="./javascript/main.js"></script>
     <script src="./javascript/RSA.js"></script>
@@ -40,6 +39,7 @@
     <div class="container">
         <div class="optionalmath">
             <p>This tool generates RSA private key from a public one.</p>
+            <p>Please enter the public key to boxes below. The first part is the number before the comma.</p>
             <span class="error">This may not be a valid public key. Please try another one.</span><br>
             <input type="number" id="nNumber" placeholder="First part" onkeydown="clearAll()" onkeypress="if(event.keyCode == 13) generateKey(this.value, document.getElementById('eNumber').value)"><br>
             <input type="number" id="eNumber" placeholder="Second part" onkeydown="clearAll()" onkeypress="if(event.keyCode == 13) generateKey(document.getElementById('nNumber').value, this.value)"><br>

@@ -33,7 +33,7 @@ function fromDec(inputNum,targetBase) //convert decimal numbers to a specified n
         input = Math.floor(input/targetBase);
     }
     output.unshift(input);
-    if (targetBase == 16)
+    if (targetBase == 16)//specify what happens in case of hexadecimal
     {
         for(let i = 0; i < output.length; i++)
         {

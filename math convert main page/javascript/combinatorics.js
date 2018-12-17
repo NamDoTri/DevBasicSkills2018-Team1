@@ -1,3 +1,4 @@
+//switch between combination calculator and permutation one
 function openTab(which, button)
 {
     var calc = document.getElementsByClassName("calculator");
@@ -14,6 +15,7 @@ function openTab(which, button)
     document.getElementById(which).style.display="block";
     button.style.color ="coral";
 }
+
 function factorial(a)
 {
     var output = a;
@@ -31,6 +33,7 @@ function combination()
     var k = Number(document.getElementById("subset").value);
     var output = n;
     var a = factorial(n-k);
+    //validate input numbers first
     if ( n == "")
     {
         document.getElementById("originalSet").placeholder = "Original set missing";
@@ -42,6 +45,7 @@ function combination()
         document.getElementById("subset").className = "red";
         
     }
+    //implement the calculation
     else{
         while ( n > k + 1 )
         {
@@ -67,6 +71,7 @@ function permutation(n,k)
 {
     var n = document.getElementById("original").value;
     var k = document.getElementById("vacancies").value;
+    //again, validate input numbers first
     if ( n == "")
     {
         document.getElementById("original").placeholder = "Original set missing";
@@ -77,6 +82,7 @@ function permutation(n,k)
         document.getElementById("vacancies").placeholder = "Number of vacancies missing";
         document.getElementById("vacancies").className = "red";
     }
+    //print out results to the screen 
     else{
         if( document.getElementById("sampling").checked == false)
         {
